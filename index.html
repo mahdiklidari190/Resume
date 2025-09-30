@@ -1,24 +1,254 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Encoded Loader</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>رزومه حرفه‌ای | Mahdi Klidari</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+    }
+    .progress-bar {
+      transition: width 1s ease-in-out;
+    }
+    .skill-item:hover .progress-bar {
+      transform: scaleY(1.2);
+    }
+    .floating {
+      animation: floating 3s ease-in-out infinite;
+    }
+    @keyframes floating {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+    .gradient-bg {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    .section-title {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 3rem;
+    }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      right: 0;
+      width: 50%;
+      height: 3px;
+      background: #667eea;
+    }
+  </style>
 </head>
-<body>
-<script>
-(function(){
-  var r = "==gC+wWb0h2L8ogP5R2bi9CPK4DdwlmcjN3L8ACIKsTK9BCIgAiC7kSfgACIgAC...wSZzFWZgMXNuADI5RXajFGcvdCI9AibvlGdpNnbhJHduUGb5R3cu0WZ0lGIgACI";
-  try {
-    var b64 = r.split('').reverse().join('');
-    var html = atob(b64);
-    document.open();
-    document.write(html);
-    document.close();
-  } catch (e) {
-    document.body.innerText = "خطا در دِکُد کردن محتوا: " + e;
-  }
-})();
-</script>
+<body class="bg-gray-50 text-gray-800">
+  <nav class="bg-white shadow-md sticky top-0 z-10">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-indigo-600">Mahdi Klidari</h1>
+      <div class="flex space-x-4 space-x-reverse">
+        <a href="#about" class="text-gray-600 hover:text-indigo-600 transition">درباره من</a>
+        <a href="#skills" class="text-gray-600 hover:text-indigo-600 transition">مهارت‌ها</a>
+        <a href="#experience" class="text-gray-600 hover:text-indigo-600 transition">تجربیات</a>
+        <a href="#contact" class="text-gray-600 hover:text-indigo-600 transition">تماس</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="gradient-bg text-white py-20">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 mb-10 md:mb-0 text-center md:text-right">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Mahdi Klidari</h1>
+        <p class="text-xl mb-6">توسعه‌دهنده بازی و وب</p>
+        <div class="flex justify-center md:justify-start space-x-4 space-x-reverse">
+          <a href="https://www.linkedin.com/in/bardia-klidari-64a32a30b" target="_blank" class="bg-white text-indigo-600 px-4 py-2 rounded-lg flex items-center hover:bg-gray-100 transition">
+            <i class="fab fa-linkedin ml-2"></i>
+            LinkedIn
+          </a>
+          <a href="tel:+989211243320" class="bg-white text-indigo-600 px-4 py-2 rounded-lg flex items-center hover:bg-gray-100 transition">
+            <i class="fas fa-phone ml-2"></i>
+            09211243320
+          </a>
+        </div>
+      </div>
+      <div class="md:w-1/2 flex justify-center">
+        <div class="w-64 h-64 bg-white/20 rounded-full flex items-center justify-center floating">
+          <i class="fas fa-code text-8xl text-white/70"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 section-title">درباره من</h2>
+      <div class="max-w-3xl mx-auto text-lg text-gray-600 text-center leading-relaxed">
+        <p class="mb-4">
+          من یک توسعه‌دهنده پرشور و خلاق با تخصص در توسعه بازی و وب هستم. با استفاده از تکنولوژی‌های مدرن، 
+          پروژه‌های جذاب و کاربردی خلق می‌کنم که تجربه کاربری بی‌نظیری ارائه می‌دهند.
+        </p>
+        <p>
+          علاقه‌مند به یادگیری مستمر و چالش‌های جدید در حوزه فناوری اطلاعات هستم و همواره به دنبال 
+          بهبود مهارت‌های فنی و حرفه‌ای خود می‌باشم.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 section-title">مهارت‌های من</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="bg-white p-6 rounded-xl shadow-md skill-item">
+          <div class="flex justify-between mb-2">
+            <span class="font-medium">HTML</span>
+            <span class="text-indigo-600">90%</span>
+          </div>
+          <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+            <div class="h-full bg-indigo-500 progress-bar" style="width: 90%"></div>
+          </div>
+        </div>
+        
+        <div class="bg-white p-6 rounded-xl shadow-md skill-item">
+          <div class="flex justify-between mb-2">
+            <span class="font-medium">CSS</span>
+            <span class="text-indigo-600">85%</span>
+          </div>
+          <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+            <div class="h-full bg-indigo-500 progress-bar" style="width: 85%"></div>
+          </div>
+        </div>
+        
+        <div class="bg-white p-6 rounded-xl shadow-md skill-item">
+          <div class="flex justify-between mb-2">
+            <span class="font-medium">JavaScript</span>
+            <span class="text-indigo-600">80%</span>
+          </div>
+          <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+            <div class="h-full bg-indigo-500 progress-bar" style="width: 80%"></div>
+          </div>
+        </div>
+        
+        <div class="bg-white p-6 rounded-xl shadow-md skill-item">
+          <div class="flex justify-between mb-2">
+            <span class="font-medium">React</span>
+            <span class="text-indigo-600">75%</span>
+          </div>
+          <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+            <div class="h-full bg-indigo-500 progress-bar" style="width: 75%"></div>
+          </div>
+        </div>
+        
+        <div class="bg-white p-6 rounded-xl shadow-md skill-item">
+          <div class="flex justify-between mb-2">
+            <span class="font-medium">Laravel</span>
+            <span class="text-indigo-600">70%</span>
+          </div>
+          <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+            <div class="h-full bg-indigo-500 progress-bar" style="width: 70%"></div>
+          </div>
+        </div>
+        
+        <div class="bg-white p-6 rounded-xl shadow-md skill-item">
+          <div class="flex justify-between mb-2">
+            <span class="font-medium">Unity (C#)</span>
+            <span class="text-indigo-600">100%</span>
+          </div>
+          <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+            <div class="h-full bg-indigo-500 progress-bar" style="width: 100%"></div>
+          </div>
+        </div>
+        
+        <div class="bg-white p-6 rounded-xl shadow-md skill-item">
+          <div class="flex justify-between mb-2">
+            <span class="font-medium">Penetration Testing</span>
+            <span class="text-indigo-600">65%</span>
+          </div>
+          <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+            <div class="h-full bg-indigo-500 progress-bar" style="width: 65%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 section-title">تجربیات من</h2>
+      <div class="max-w-4xl mx-auto">
+        <div class="mb-8 p-6 bg-gray-50 rounded-xl border-r-4 border-indigo-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-2">توسعه بازی</h3>
+          <p class="text-gray-600">سازنده بازی با موتور Unity در مدل‌های D2 , D3</p>
+        </div>
+        
+        <div class="mb-8 p-6 bg-gray-50 rounded-xl border-r-4 border-indigo-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-2">طراحی وب</h3>
+          <p class="text-gray-600">ساخت وبسایت و سیستم‌های تحت وب با React و Laravel</p>
+        </div>
+        
+        <div class="mb-8 p-6 bg-gray-50 rounded-xl border-r-4 border-indigo-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-2">امنیت و تست نفوذ</h3>
+          <p class="text-gray-600">طراحی ابزارها و سیستم‌های تست نفوذ و باگ هانتینگ</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 section-title">تماس با من</h2>
+      <div class="max-w-lg mx-auto bg-white p-8 rounded-xl shadow-md">
+        <div class="flex items-center mb-6 p-4 bg-indigo-50 rounded-lg">
+          <i class="fab fa-linkedin text-indigo-600 text-xl ml-3"></i>
+          <div>
+            <p class="font-medium">LinkedIn</p>
+            <a href="https://www.linkedin.com/in/bardia-klidari-64a32a30b" target="_blank" class="text-indigo-600">bardia-klidari-64a32a30b</a>
+          </div>
+        </div>
+        
+        <div class="flex items-center mb-6 p-4 bg-green-50 rounded-lg">
+          <i class="fas fa-phone text-green-600 text-xl ml-3"></i>
+          <div>
+            <p class="font-medium">شماره تماس</p>
+            <a href="tel:+989211243320" class="text-green-600">09211243320</a>
+          </div>
+        </div>
+        
+        <p class="text-center text-gray-600 mt-8">از طریق راه‌های ارتباطی بالا می‌توانید با من در ارتباط باشید</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p>© 2023 Mahdi Klidari. تمامی حقوق محفوظ است.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const skillItems = document.querySelectorAll('.skill-item');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      skillItems.forEach(item => {
+        item.style.opacity = 0;
+        item.style.transform = 'translateY(20px)';
+        item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        observer.observe(item);
+      });
+    });
+  </script>
 </body>
 </html>
