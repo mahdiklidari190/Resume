@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>رزومه Mahdi Klidari</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- React & ReactDOM CDN -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <!-- Babel for JSX -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body class="bg-gray-100">
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const skills = [
+      { name: "HTML", level: 90 },
+      { name: "CSS", level: 85 },
+      { name: "JavaScript", level: 80 },
+      { name: "React", level: 75 },
+      { name: "Laravel", level: 70 },
+      { name: "Unity (C#)", level: 80 },
+      { name: "Penetration Testing", level: 65 },
+    ];
+
+    const experiences = [
+      { title: "توسعه بازی", desc: "طراحی و پیاده‌سازی پروژه‌های 2D و 3D با Unity" },
+      { title: "طراحی وب", desc: "ساخت وبسایت و سیستم‌های تحت وب با React و Laravel" },
+      { title: "امنیت و تست نفوذ", desc: "طراحی ابزارها و سیستم‌های تست نفوذ و باگ هانتینگ" },
+    ];
+
+    const socialLinks = [
+      { name: "LinkedIn", url: "https://www.linkedin.com/in/bardia-klidari-64a32a30b-64a32a30b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+      { name: "Email", url: "mailto:mahdiklidari190@gmail.com" },
+    ];
+
+    const SkillBar = ({ name, level }) => (
+      <div className="mb-4">
+        <div className="flex justify-between mb-1">
+          <span className="font-medium">{name}</span>
+          <span className="text-sm">{level}%</span>
+        </div>
+        <div className="w-full bg-gray-300 rounded-full h-3">
+          <div
+            className="bg-blue-500 h-3 rounded-full transition-all duration-1000"
+            style={{ width: `${level}%` }}
+          ></div>
+        </div>
+      </div>
+    );
+
+    function App() {
+      return (
+        <div className="min-h-screen p-6">
+          <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-8">
+            {/* Header */}
+            <div className="text-center mb-8">
+              <h1 className="text-4xl font-bold text-blue-500">Mahdi Klidari</h1>
+              <p className="text-gray-700 mt-2">نیشابور | Web & Game Developer</p>
+              <div className="flex justify-center space-x-4 mt-2">
+                {socialLinks.map((link) => (
+                  <a
+                    key={link.name}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-500 hover:underline"
+                  >
+                    {link.name}
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Skills */}
+            <div className="mb-8">
+              <h2 className="text-2xl font-bold text-blue-500 mb-4">مهارت‌ها</h2>
+              {skills.map((skill) => (
+                <SkillBar key={skill.name} {...skill} />
+              ))}
+            </div>
+
+            {/* Experiences */}
+            <div className="mb-8">
+              <h2 className="text-2xl font-bold text-blue-500 mb-4">تجربه‌ها</h2>
+              <div className="space-y-4">
+                {experiences.map((exp, idx) => (
+                  <div key={idx} className="bg-gray-50 p-4 rounded shadow-sm">
+                    <h3 className="font-semibold text-gray-800">{exp.title}</h3>
+                    <p className="text-gray-600 mt-1">{exp.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Footer */}
+            <div className="text-center mt-8 text-gray-500">
+              © 2025 Mahdi Klidari
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+  </script>
+</body>
+</html>
