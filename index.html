@@ -5,12 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
   
   <!-- SEO & Meta Tags -->
-  <meta name="description" content="مهدی کلیداری - متخصص Unity و توسعه‌دهنده فول‌استک با تسلط بر امنیت بازی، اتوماسیون n8n و هوش مصنوعی اوپن سورس">
-  <meta name="keywords" content="Unity Expert,Game Security,Anti-Cheat,n8n Automation,AI Developer,Open Source AI,Full Stack Developer">
+  <meta name="description" content="Mahdi Klidari - Full Stack Developer & Unity Expert with 6+ years experience in game development, web apps, cyber security, and AI automation.">
+  <meta name="keywords" content="Unity Developer,React Developer,Laravel,Cyber Security,AI Automation,Full Stack Developer">
   <meta name="author" content="Mahdi Klidari">
   <meta name="robots" content="index,follow">
   
-  <title>Mahdi Klidari - Unity Expert & AI Automation Specialist</title>
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mahdi Klidari - Full Stack Developer & Unity Expert">
+  <meta property="og:description" content="Professional developer specializing in Unity, React, Laravel, and AI automation">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mahdiklidari.com">
+  <meta property="og:locale" content="fa_IR">
+  <meta property="og:locale:alternate" content="en_US">
+  
+  <title>Mahdi Klidari - Full Stack Developer & Unity Expert</title>
   
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -280,41 +288,23 @@
       }
     }
     
-    /* Project card styling */
-    .project-card {
-      cursor: pointer;
+    /* Image styling for skills and projects */
+    .skill-img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      border-radius: 8px;
     }
     
-    .project-card:hover .project-img {
-      transform: scale(1.05);
-      transition: transform 0.3s ease;
+    .project-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
     
-    .project-img-container {
-      position: absolute;
-      inset: 0;
-      background-size: cover;
-      background-position: center;
-      transition: transform 0.3s ease;
-    }
-    
-    .project-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background 0.3s ease;
-    }
-    
-    .project-card:hover .project-overlay {
-      background: linear-gradient(135deg, rgba(0,0,0,0.5), rgba(0,0,0,0.2));
-    }
-    
-    .project-content {
-      position: relative;
-      z-index: 1;
+    /* Placeholder fallback for images */
+    .img-error {
+      display: none;
     }
   </style>
 </head>
@@ -397,19 +387,19 @@
             <span id="typed-name"></span>
           </h1>
           <p class="text-xl md:text-2xl text-white/90 mb-6">
-            <span id="typed-role" data-i18n="hero.role">متخصص Unity | توسعه‌دهنده فول‌استک | متخصص امنیت بازی و اتوماسیون</span>
+            <span id="typed-role" data-i18n="hero.role">توسعه‌دهنده فول‌استک | Unity Expert | متخصص اتوماسیون هوشمند</span>
           </p>
           <div class="flex flex-wrap justify-center md:justify-start gap-3 md:gap-4">
             <a href="#contact" class="bg-white text-indigo-600 px-6 md:px-8 py-3 md:py-4 rounded-full font-bold hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-xl flex items-center space-x-2 space-x-reverse text-sm md:text-base" 
                aria-label="Start collaboration" data-i18n="hero.cta1">
               <i class="fas fa-rocket" aria-hidden="true"></i>
-              <span data-i18n="hero.cta1">شروع همکاری</span>
+              <span>شروع همکاری</span>
             </a>
             <a href="https://t.me/BK_1ir" target="_blank" rel="noopener noreferrer" 
                class="bg-white/20 backdrop-blur text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-bold hover:bg-white/30 transform hover:scale-105 transition-all duration-300 border border-white/30 flex items-center space-x-2 space-x-reverse text-sm md:text-base" 
                aria-label="Contact via Telegram" data-i18n="hero.cta2">
               <i class="fab fa-telegram" aria-hidden="true"></i>
-              <span data-i18n="hero.cta2">تماس تلگرام</span>
+              <span>تماس تلگرام</span>
             </a>
           </div>
         </div>
@@ -451,13 +441,13 @@
               من مهدی کلیداری هستم، یک توسعه‌دهنده فول‌استک که عاشق خلق تجربه‌های دیجیتالی بی‌نظیره. از توسعه بازی‌های AAA با Unity تا ساخت وب‌اپلیکیشن‌های مقیاس‌پذیر با React و Laravel، همیشه به دنبال کد تمیز، بهینه و نوآورانه هستم.
             </p>
             <p id="aboutDesc2" data-i18n="about.description2">
-              تسلط من بر امنیت بازی (Anti-Cheat) و اتوماسیون n8n بهم این اجازه رو میده که سیستم‌های پیچیده و امن بسازم. همچنین در هوش مصنوعی اوپن سورس فعالم و مدل‌های LLM رو کدنویسی و آموزش میدم.
+              تسلط من بر هوش مصنوعی و اتوماسیون با n8n بهم این اجازه رو میده که سیستم‌های هوشمند بسازم. همچنین تخصص من در امنیت سایبری باعث میشه محصولاتی تحویل بدم که نه تنها زیبا، بلکه کاملاً امن هستن.
             </p>
             <div class="flex flex-wrap gap-2 mt-6 justify-center md:justify-start">
               <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-300 rounded-full text-xs md:text-sm">#UnityExpert</span>
-              <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300 rounded-full text-xs md:text-sm">#GameSecurity</span>
-              <span class="px-3 py-1 bg-pink-100 dark:bg-pink-900 text-pink-600 dark:text-purple-300 rounded-full text-xs md:text-sm">#n8nExpert</span>
-              <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 rounded-full text-xs md:text-sm">#OpenSourceAI</span>
+              <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300 rounded-full text-xs md:text-sm">#FullStack</span>
+              <span class="px-3 py-1 bg-pink-100 dark:bg-pink-900 text-pink-600 dark:text-pink-300 rounded-full text-xs md:text-sm">#CyberSecurity</span>
+              <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 rounded-full text-xs md:text-sm">#AI_Automation</span>
             </div>
           </div>
         </div>
@@ -512,7 +502,7 @@
           <div class="scroll-reveal space-y-6">
             <h3 class="text-xl md:text-2xl font-bold mb-2 text-gray-800 dark:text-white" data-i18n="contact.subtitle">پروژه بعدی رو باهم بسازیم</h3>
             <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base" id="contactDesc" data-i18n="contact.description">
-              تخصص من در Unity، امنیت بازی، n8n و هوش مصنوعی اوپن سورس باعث میشه پروژه‌های شما را به بالاترین سطح ممکن برسونم. بیایید ایده‌هایتان را به واقعیت تبدیل کنیم!
+              اگه دنبال توسعه‌دهنده‌ای حرفه‌ای می‌گردید که کد تمیز، راهکارهای خلاقانه و تحویل سریع داشته باشه، من اینجام تا پروژه‌تون رو به واقعیت تبدیل کنم. از ایده‌هاتون بگید تا یه چیز خفن بسازیم!
             </p>
             <div class="space-y-4" id="contactInfo">
               <!-- Populated by JS -->
@@ -607,7 +597,7 @@
           contact: 'تماس' 
         },
         hero: { 
-          role: 'متخصص Unity | توسعه‌دهنده فول‌استک | متخصص امنیت بازی و اتوماسیون',
+          role: 'توسعه‌دهنده فول‌استک | Unity Expert | متخصص اتوماسیون هوشمند',
           cta1: 'شروع همکاری',
           cta2: 'تماس تلگرام'
         },
@@ -615,51 +605,33 @@
           title: 'درباره من',
           subtitle: 'چرا باید با من کار کنی؟',
           points: [
-            'بیش از 6 سال تجربه توسعه بازی و نرم‌افزار',
-            'متخصص امنیت بازی (Anti-Cheat) و جلوگیری از هک',
-            'تسلط کامل به n8n و اتوماسیون پیچیده',
-            'متخصص هوش مصنوعی اوپن سورس و آموزش LLM'
+            'بیش از 6 سال تجربه برنامه‌نویسی حرفه‌ای',
+            'تخصص در Unity, React, Laravel, Python',
+            'تسلط بر هوش مصنوعی و اتوماسیون با n8n',
+            'متخصص امنیت سایبری و تست نفوذ'
           ],
-          description1: 'من مهدی کلیداری هستم، متخصص Unity و توسعه‌دهنده فول‌استک که تخصص خاصی در امنیت بازی، اتوماسیون n8n و هوش مصنوعی اوپن سورس دارم. از توسعه بازی‌های AAA تا سیستم‌های امنیتی پیچیده، همیشه به دنبال چالش‌های جدید هستم.',
-          description2: 'تسلط من بر n8n و هوش مصنوعی باعث میشه سیستم‌های هوشمند و خودکار بسازم که کسب‌وکارها رو متحول می‌کنه. همچنین در امنیت بازی و جلوگیری از هک تخصص دارم و مدل‌های LLM رو کدنویسی و آموزش میدم.'
+          description1: 'من مهدی کلیداری هستم، یک توسعه‌دهنده فول‌استک که عاشق خلق تجربه‌های دیجیتالی بی‌نظیره. از توسعه بازی‌های AAA با Unity تا ساخت وب‌اپلیکیشن‌های مقیاس‌پذیر با React و Laravel، همیشه به دنبال کد تمیز، بهینه و نوآورانه هستم.',
+          description2: 'تسلط من بر هوش مصنوعی و اتوماسیون با n8n بهم این اجازه رو میده که سیستم‌های هوشمند بسازم. همچنین تخصص من در امنیت سایبری باعث میشه محصولاتی تحویل بدم که نه تنها زیبا، بلکه کاملاً امن هستن.'
         },
         skills: {
           title: 'مهارت‌های تخصصی',
           items: [
             { 
-              name: 'Unity & Game Dev', 
+              name: 'Unity (C#)', 
               level: 'سطح: متخصص', 
               percent: 100, 
               color: 'indigo'
             },
             { 
-              name: 'Game Security (Anti-Cheat)', 
-              level: 'سطح: پیشرفته', 
-              percent: 90, 
-              color: 'red'
-            },
-            { 
-              name: 'n8n Automation', 
-              level: 'سطح: متخصص', 
-              percent: 95, 
-              color: 'purple'
-            },
-            { 
-              name: 'Open Source AI (LLM)', 
-              level: 'سطح: پیشرفته', 
-              percent: 85, 
-              color: 'green'
-            },
-            { 
               name: 'React & Next.js', 
               level: 'سطح: پیشرفته', 
-              percent: 85, 
+              percent: 90, 
               color: 'cyan'
             },
             { 
               name: 'Laravel & PHP', 
               level: 'سطح: پیشرفته', 
-              percent: 80, 
+              percent: 85, 
               color: 'red'
             },
             { 
@@ -670,9 +642,27 @@
             },
             { 
               name: 'JavaScript (ES2023)', 
-              level: 'سطح: پیشرفته', 
-              percent: 90, 
+              level: 'سطح: متخصص', 
+              percent: 95, 
               color: 'yellow'
+            },
+            { 
+              name: 'n8n Automation', 
+              level: 'سطح: پیشرفته', 
+              percent: 75, 
+              color: 'purple'
+            },
+            { 
+              name: 'Cyber Security', 
+              level: 'سطح: متوسط', 
+              percent: 70, 
+              color: 'red'
+            },
+            { 
+              name: 'C/C++ Systems', 
+              level: 'سطح: متوسط', 
+              percent: 85, 
+              color: 'blue'
             }
           ]
         },
@@ -680,46 +670,40 @@
           title: 'پروژه‌های برجسته',
           items: [
             {
-              title: '.: Milad GH :. - بازی اکشن آنلاین',
-              description: 'بازی اکشن 3D با گرافیک AAA، سیستم مولتی‌پلیر 8 نفره، امنیت پیشرفته ضد هک و بهینه‌سازی برای 120 FPS. این پروژه شامل سیستم Anti-Cheat اختصاصی و سرور اختصاصی با Photon Fusion هست.',
-              tags: ['Unity 2023', 'Photon Fusion', 'Anti-Cheat', 'C#', 'URP'],
-              gradient: 'from-indigo-500 to-purple-600',
-              img: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&h=600&fit=crop'
+              title: 'بازی اکشن 3D - Unity Engine',
+              description: 'پلتفرمر اکشن با گرافیک AAA، فیزیک پیشرفته Havok، AI دشمنان پیچیده با فرمولاسیون Behavior Trees و سیستم مولتی‌پلیر آنلاین 8 نفره با Photon Fusion. بهینه‌سازی شده برای 60 FPS رو موبایل و 120 FPS رو PC.',
+              tags: ['Unity 2023', 'C#', 'Photon', 'Havok Physics', 'URP'],
+              gradient: 'from-indigo-500 to-purple-600'
             },
             {
-              title: 'سیستم امنیت بازی (Anti-Cheat Suite)',
-              description: 'سیستم جامع امنیت بازی با تشخیص هک در ریل‌تایم، آنالیز الگوهای مشکوک و بلاک کردن بازیکنان متقلب. شامل Hook Detection، Memory Scanner و سیستم گزارش‌گیری خودکار.',
-              tags: ['C++', 'Assembly', 'Reverse Engineering', 'Kernel Level', 'Python'],
-              gradient: 'from-red-500 to-orange-600',
-              img: 'https://images.unsplash.com/photo-1550745165-9bc0b252726a?w=800&h=600&fit=crop'
+              title: 'Security Scanner Suite - ابزار اختصاصی',
+              description: 'ابزار جامع تست نفوذ با اسکن خودکار آسیب‌پذیری‌های OWASP Top 10، گزارش‌گیری حرفه‌ای PDF/CSV و داشبورد مدیریتی ریل‌تایم. دارای ماژول‌های fuzzing، reconnaissance و exploitation برای وب و شبکه.',
+              tags: ['Python', 'React', 'OWASP', 'Metasploit API', 'Docker'],
+              gradient: 'from-red-500 to-orange-600'
             },
             {
-              title: 'سیستم اتوماسیون n8n Enterprise',
-              description: 'اتوماسیون کامل فرآیندهای کسب‌وکار با 50+ workflow پیچیده. ادغام با AI، CRM، پرداخت و مدیریت سرور. سیستم مانیتورینگ و لاگ‌گیری پیشرفته با هوش مصنوعی.',
-              tags: ['n8n', 'Node.js', 'AI Integration', 'PostgreSQL', 'Redis'],
-              gradient: 'from-green-500 to-emerald-600',
-              img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop'
+              title: 'AI Automation System - n8n Enterprise',
+              description: 'سیستم اتوماسیون هوشمند با n8n برای مدیریت 200+ workflow و ادغام AI. اتوماسیون کامل فرآیندهای کسب‌وکار از CRM تا ساپورت با هوش مصنوعی GPT-4 و مدل‌های اختصاصی.',
+              tags: ['n8n', 'Node.js', 'OpenAI API', 'PostgreSQL', 'Redis'],
+              gradient: 'from-green-500 to-emerald-600'
             },
             {
-              title: 'پلتفرم آموزش AI اوپن سورس',
-              description: 'پلتفرم آموزشی برای کدنویسی و fine-tuning مدل‌های LLM. شامل آموزش تصویری، کد نمونه و ابزارهای تست مدل. پشتیبانی از LLaMA, Mistral و Claude.',
-              tags: ['Python', 'PyTorch', 'Hugging Face', 'GPT', 'React'],
-              gradient: 'from-blue-500 to-cyan-600',
-              img: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop'
+              title: 'E-Commerce Platform - پلتفرم B2B2C',
+              description: 'فروشگاه ساز حرفه‌ای با پنل ادمین پیشرفته، سیستم پرداخت زرین‌پال و IDPay، مدیریت انبار هوشمند و پنل فروشندگان. پشتیبانی از 50K محصول و 10K کاربر همزمان.',
+              tags: ['Laravel 10', 'Vue.js 3', 'MySQL', 'Redis', 'Elasticsearch'],
+              gradient: 'from-blue-500 to-cyan-600'
             },
             {
               title: 'Analytics Dashboard - BI Tool',
-              description: 'داشبورد تحلیل داده‌های تجاری با نمودارهای زنده، پیش‌بینی فروش با ML و گزارش‌گیری خودکار. اتصال به 15+ دیتاسورس و قابلیت export به فرمت‌های مختلف.',
+              description: 'داشبورد تحلیل داده‌های تجاری با نمودارهای زنده Chart.js، گزارش‌گیری پیشرفته و پیش‌بینی فروش با ML. اتصال به دیتاسورس‌های متنوع از جمله Google Analytics، MySQL و Excel.',
               tags: ['React', 'Chart.js', 'Python', 'Pandas', 'FastAPI'],
-              gradient: 'from-purple-500 to-pink-600',
-              img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop'
+              gradient: 'from-purple-500 to-pink-600'
             },
             {
-              title: 'E-Commerce Platform - B2B2C',
-              description: 'پلتفرم فروشگاهی حرفه‌ای با پنل فروشندگان، سیستم پرداخت چندمرحله‌ای، مدیریت انبار هوشمند و پشتیبانی از 100K محصول. بهینه‌سازی شده برای 50K کاربر همزمان.',
-              tags: ['Laravel 10', 'Vue.js 3', 'MySQL', 'Redis', 'Elasticsearch'],
-              gradient: 'from-yellow-500 to-orange-600',
-              img: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop'
+              title: 'Social Media App - React Native',
+              description: 'اپلیکیشن شبکه اجتماعی کراس‌پلتفرم با React Native، آرچیتکچر MVVM، Firebase Authentication و Realtime Database. شامل پست‌گذاری، استوری و چت ریل‌تایم.',
+              tags: ['React Native', 'Firebase', 'Redux Toolkit', 'WebRTC', 'Expo'],
+              gradient: 'from-yellow-500 to-orange-600'
             }
           ]
         },
@@ -728,45 +712,31 @@
           items: [
             {
               icon: 'fa-gamepad',
-              title: 'Lead Unity Developer',
+              title: 'توسعه‌دهنده ارشد بازی (Unity)',
               date: '2022 - حال',
-              company: 'Game Studio & Indie Projects',
-              description: 'توسعه بازی‌های AAA با Unity، طراحی سیستم‌های Anti-Cheat پیشرفته، بهینه‌سازی Performance و گرافیک، پیاده‌سازی سرور اختصاصی با Photon Fusion و مدیریت تیم 5 نفره.'
-            },
-            {
-              icon: 'fa-shield-alt',
-              title: 'Game Security Specialist',
-              date: '2021 - حال',
-              company: 'Independent Security Consultant',
-              description: 'طراحی و پیاده‌سازی سیستم‌های امنیت بازی (Anti-Cheat) برای 10+ پروژه، تشخیص هک در ریل‌تایم، ریورس انجینیرینگ و توسعه Kernel-Level Protection.'
-            },
-            {
-              icon: 'fa-cogs',
-              title: 'n8n Automation Expert',
-              date: '2020 - حال',
-              company: 'Enterprise Automation Solutions',
-              description: 'طراحی و پیاده‌سازی 50+ اتوماسیون پیچیده با n8n، ادغام AI/ML، مدیریت workflow‌های سازمانی و کاهش 70% کارهای تکراری.'
-            },
-            {
-              icon: 'fa-robot',
-              title: 'Open Source AI Developer',
-              date: '2023 - حال',
-              company: 'AI Education & Development',
-              description: 'کدنویسی و fine-tuning مدل‌های LLM (LLaMA, Mistral)، توسعه ابزارهای آموزشی AI، آموزش 500+ دانشجو و ساخت پلتفرم آموزشی اختصاصی.'
+              company: 'استودیو مستقل بازی‌سازی',
+              description: 'توسعه بازی‌های AAA با Unity، بهینه‌سازی Performance و گرافیک، پیاده‌سازی سیستم‌های چندنفره آنلاین با Photon و Shader Graph برای جلوه‌های بصری next-gen.'
             },
             {
               icon: 'fa-code',
-              title: 'Full Stack Developer',
-              date: '2019 - 2022',
-              company: 'Tech Solutions Company',
-              description: 'توسعه پلتفرم‌های SaaS، طراحی معماری سیستم‌های مقیاس‌پذیر، پیاده‌سازی CI/CD و توسعه API‌های RESTful با Laravel و Node.js.'
+              title: 'توسعه‌دهنده فول‌استک (Lead)',
+              date: '2020 - 2022',
+              company: 'شرکت فناوری اطلاعات برتر',
+              description: 'طراحی معماری سیستم‌های تحت وب، توسعه API‌های RESTful با Laravel، پیاده‌سازی CI/CD با GitLab و اتوماسیون 30+ فرآیند با n8n.'
+            },
+            {
+              icon: 'fa-shield-alt',
+              title: 'کارشناس امنیت سایبری',
+              date: '2019 - 2020',
+              company: 'شرکت امنیت سایبری',
+              description: 'ارزیابی امنیت برنامه‌ها با OWASP ASVS، تست نفوذ پیشرفته برای 50+ سازمان، پیاده‌سازی راهکارهای امنیتی و آموزش تیم DevSecOps.'
             }
           ]
         },
         contact: {
           title: 'بیایید همکاری کنیم',
           subtitle: 'پروژه بعدی رو باهم بسازیم',
-          description: 'تخصص من در Unity، امنیت بازی، n8n و هوش مصنوعی اوپن سورس باعث میشه پروژه‌های شما را به بالاترین سطح ممکن برسونم. بیایید ایده‌هایتان را به واقعیت تبدیل کنیم!',
+          description: 'اگه دنبال توسعه‌دهنده‌ای حرفه‌ای می‌گردید که کد تمیز، راهکارهای خلاقانه و تحویل سریع داشته باشه، من اینجام تا پروژه‌تون رو به واقعیت تبدیل کنم. از ایده‌هاتون بگید تا یه چیز خفن بسازیم!',
           formTitle: 'فرم تماس سریع',
           formButton: 'ارسال پیام',
           formPlaceholder: {
@@ -813,7 +783,7 @@
           contact: 'Contact' 
         },
         hero: { 
-          role: 'Unity Expert | Full Stack Developer | Game Security & Automation Specialist',
+          role: 'Full Stack Developer | Unity Expert | AI Automation Specialist',
           cta1: 'Start Collaboration',
           cta2: 'Telegram Contact'
         },
@@ -821,51 +791,33 @@
           title: 'About Me',
           subtitle: 'Why Work With Me?',
           points: [
-            '6+ Years Game & Software Development',
-            'Expert in Game Security (Anti-Cheat)',
-            'n8n Automation Mastery',
-            'Open Source AI & LLM Training'
+            '6+ Years Professional Development Experience',
+            'Expert in Unity, React, Laravel, Python',
+            'AI & n8n Automation Mastery',
+            'Cyber Security & Penetration Testing Specialist'
           ],
-          description1: 'I\'m Mahdi Klidari, a Unity specialist and full-stack developer with deep expertise in game security, n8n automation, and open source AI. From AAA games to complex automation systems, I always deliver cutting-edge solutions.',
-          description2: 'My mastery of n8n and game security allows me to build robust, scalable systems. I also code and train LLM models, helping businesses leverage open source AI effectively.'
+          description1: 'I\'m Mahdi Klidari, a full-stack developer passionate about creating exceptional digital experiences. From developing AAA games with Unity to building scalable web apps with React and Laravel, I always strive for clean, optimized, and innovative code.',
+          description2: 'My expertise in AI and n8n automation allows me to build intelligent systems. Additionally, my specialization in cyber security ensures I deliver products that are not only beautiful but completely secure.'
         },
         skills: {
           title: 'My Skills',
           items: [
             { 
-              name: 'Unity & Game Dev', 
+              name: 'Unity (C#)', 
               level: 'Level: Expert', 
               percent: 100, 
               color: 'indigo'
             },
             { 
-              name: 'Game Security (Anti-Cheat)', 
-              level: 'Level: Advanced', 
-              percent: 90, 
-              color: 'red'
-            },
-            { 
-              name: 'n8n Automation', 
-              level: 'Level: Expert', 
-              percent: 95, 
-              color: 'purple'
-            },
-            { 
-              name: 'Open Source AI (LLM)', 
-              level: 'Level: Advanced', 
-              percent: 85, 
-              color: 'green'
-            },
-            { 
               name: 'React & Next.js', 
               level: 'Level: Advanced', 
-              percent: 85, 
+              percent: 90, 
               color: 'cyan'
             },
             { 
               name: 'Laravel & PHP', 
               level: 'Level: Advanced', 
-              percent: 80, 
+              percent: 85, 
               color: 'red'
             },
             { 
@@ -876,9 +828,68 @@
             },
             { 
               name: 'JavaScript (ES2023)', 
-              level: 'Level: Advanced', 
-              percent: 90, 
+              level: 'Level: Expert', 
+              percent: 95, 
               color: 'yellow'
+            },
+            { 
+              name: 'n8n Automation', 
+              level: 'Level: Advanced', 
+              percent: 75, 
+              color: 'purple'
+            },
+            { 
+              name: 'Cyber Security', 
+              level: 'Level: Intermediate', 
+              percent: 70, 
+              color: 'red'
+            },
+            { 
+              name: 'C/C++ Systems', 
+              level: 'Level: Intermediate', 
+              percent: 85, 
+              color: 'blue'
+            }
+          ]
+        },
+        projects: {
+          title: 'Featured Projects',
+          items: [
+            {
+              title: '3D Action Game - Unity Engine',
+              description: 'Action platformer with AAA graphics, advanced Havok physics, complex enemy AI with Behavior Trees, and 8-player online multiplayer via Photon Fusion. Optimized for 60 FPS on mobile and 120 FPS on PC.',
+              tags: ['Unity 2023', 'C#', 'Photon', 'Havok Physics', 'URP'],
+              gradient: 'from-indigo-500 to-purple-600'
+            },
+            {
+              title: 'Security Scanner Suite - Custom Tool',
+              description: 'Comprehensive penetration testing tool with automated OWASP Top 10 vulnerability scanning, professional PDF/CSV reporting, and real-time management dashboard. Includes fuzzing, reconnaissance, and exploitation modules for web and network.',
+              tags: ['Python', 'React', 'OWASP', 'Metasploit API', 'Docker'],
+              gradient: 'from-red-500 to-orange-600'
+            },
+            {
+              title: 'AI Automation System - n8n Enterprise',
+              description: 'Intelligent automation system with n8n for managing 200+ workflows and AI integration. Complete business process automation from CRM to support with GPT-4 and custom ML models.',
+              tags: ['n8n', 'Node.js', 'OpenAI API', 'PostgreSQL', 'Redis'],
+              gradient: 'from-green-500 to-emerald-600'
+            },
+            {
+              title: 'E-Commerce Platform - B2B2C Marketplace',
+              description: 'Professional e-commerce platform with advanced admin panel, ZarinPal & IDPay payment integration, smart inventory management, and vendor panel. Supports 50K products and 10K concurrent users.',
+              tags: ['Laravel 10', 'Vue.js 3', 'MySQL', 'Redis', 'Elasticsearch'],
+              gradient: 'from-blue-500 to-cyan-600'
+            },
+            {
+              title: 'Analytics Dashboard - BI Tool',
+              description: 'Business intelligence dashboard with real-time Chart.js visualizations, advanced reporting, and ML-based sales forecasting. Connects to various data sources including Google Analytics, MySQL, and Excel.',
+              tags: ['React', 'Chart.js', 'Python', 'Pandas', 'FastAPI'],
+              gradient: 'from-purple-500 to-pink-600'
+            },
+            {
+              title: 'Social Media App - React Native',
+              description: 'Cross-platform social media app with React Native, MVVM architecture, Firebase Authentication and Real-time Database. Features posting, stories, and real-time chat.',
+              tags: ['React Native', 'Firebase', 'Redux Toolkit', 'WebRTC', 'Expo'],
+              gradient: 'from-yellow-500 to-orange-600'
             }
           ]
         },
@@ -887,45 +898,31 @@
           items: [
             {
               icon: 'fa-gamepad',
-              title: 'Lead Unity Developer',
+              title: 'Senior Unity Game Developer (Lead)',
               date: '2022 - Present',
-              company: 'Game Studio & Indie Projects',
-              description: 'Developing AAA games with Unity, designing advanced Anti-Cheat systems, optimizing performance and graphics, implementing custom Photon Fusion servers and managing a 5-person team.'
-            },
-            {
-              icon: 'fa-shield-alt',
-              title: 'Game Security Specialist',
-              date: '2021 - Present',
-              company: 'Independent Security Consultant',
-              description: 'Designing and implementing game security (Anti-Cheat) for 10+ projects, real-time hack detection, reverse engineering and developing Kernel-Level Protection.'
-            },
-            {
-              icon: 'fa-cogs',
-              title: 'n8n Automation Expert',
-              date: '2020 - Present',
-              company: 'Enterprise Automation Solutions',
-              description: 'Designing and implementing 50+ complex n8n automations, AI/ML integration, managing enterprise workflows and reducing repetitive tasks by 70%.'
-            },
-            {
-              icon: 'fa-robot',
-              title: 'Open Source AI Developer',
-              date: '2023 - Present',
-              company: 'AI Education & Development',
-              description: 'Coding and fine-tuning LLM models (LLaMA, Mistral), developing AI education tools, training 500+ students and building custom AI platforms.'
+              company: 'Independent Game Studio',
+              description: 'Developing AAA games with Unity, performance and graphics optimization, implementing online multiplayer systems with Photon, and creating visual effects with Shader Graph for next-gen graphics.'
             },
             {
               icon: 'fa-code',
-              title: 'Full Stack Developer',
-              date: '2019 - 2022',
-              company: 'Tech Solutions Company',
-              description: 'Developing SaaS platforms, designing scalable system architecture, implementing CI/CD and developing RESTful APIs with Laravel and Node.js.'
+              title: 'Full Stack Developer (Lead)',
+              date: '2020 - 2022',
+              company: 'Top IT Solutions Company',
+              description: 'Designing web system architecture, developing RESTful APIs with Laravel, implementing CI/CD with GitLab, and automating 30+ business processes with n8n.'
+            },
+            {
+              icon: 'fa-shield-alt',
+              title: 'Cyber Security Specialist',
+              date: '2019 - 2020',
+              company: 'Cyber Security Firm',
+              description: 'Security assessment of applications using OWASP ASVS, advanced penetration testing for 50+ organizations, implementing security solutions, and training DevSecOps teams.'
             }
           ]
         },
         contact: {
           title: 'Let\\\'s Work Together',
           subtitle: 'Build Your Next Project With Me',
-          description: 'My expertise in Unity, game security, n8n and open source AI can take your projects to the highest level. Let\\\'s turn your ideas into reality!',
+          description: 'Looking for a professional developer who delivers clean code, creative solutions, and fast turnaround? I\\\'m here to turn your ideas into reality. Share your vision and let\\\'s create something amazing!',
           formTitle: 'Quick Contact Form',
           formButton: 'Send Message',
           formPlaceholder: {
@@ -989,13 +986,13 @@
       container.innerHTML = '';
       
       const colorMap = {
-        indigo: { text: 'indigo-600', gradient: 'from-indigo-500 to-purple-600' },
-        cyan: { text: 'cyan-600', gradient: 'from-cyan-500 to-blue-600' },
-        red: { text: 'red-600', gradient: 'from-red-500 to-pink-600' },
-        green: { text: 'green-600', gradient: 'from-green-500 to-emerald-600' },
-        yellow: { text: 'yellow-600', gradient: 'from-yellow-500 to-orange-600' },
-        purple: { text: 'purple-600', gradient: 'from-purple-500 to-pink-600' },
-        blue: { text: 'blue-600', gradient: 'from-blue-500 to-cyan-600' }
+        indigo: { bg: 'indigo-600', text: 'indigo-600', gradient: 'from-indigo-500 to-purple-600' },
+        cyan: { bg: 'cyan-600', text: 'cyan-600', gradient: 'from-cyan-500 to-blue-600' },
+        red: { bg: 'red-600', text: 'red-600', gradient: 'from-red-500 to-pink-600' },
+        green: { bg: 'green-600', text: 'green-600', gradient: 'from-green-500 to-emerald-600' },
+        yellow: { bg: 'yellow-500', text: 'yellow-600', gradient: 'from-yellow-500 to-orange-600' },
+        purple: { bg: 'purple-600', text: 'purple-600', gradient: 'from-purple-500 to-pink-600' },
+        blue: { bg: 'blue-600', text: 'blue-600', gradient: 'from-blue-500 to-cyan-600' }
       };
 
       t.items.forEach(skill => {
@@ -1029,17 +1026,15 @@
       const container = document.getElementById('projectsContainer');
       container.innerHTML = '';
       
-      t.items.forEach((project, index) => {
+      t.items.forEach(project => {
         const card = document.createElement('article');
-        card.className = 'project-card card-hover bg-gray-50 dark:bg-gray-900 rounded-2xl overflow-hidden shadow-xl scroll-reveal relative';
+        card.className = 'project-card card-hover bg-gray-50 dark:bg-gray-900 rounded-2xl overflow-hidden shadow-xl scroll-reveal';
         card.innerHTML = `
-          <div class="h-64 relative overflow-hidden group">
-            <div class="project-img-container" style="background-image: url('${project.img}')" aria-label="${project.title}"></div>
-            <div class="project-overlay">
-              <div class="project-content text-center text-white p-4">
-                <i class="fas fa-star text-4xl mb-2 opacity-80" aria-hidden="true"></i>
-                <h3 class="font-bold text-lg">${project.title}</h3>
-              </div>
+          <div class="h-48 bg-gradient-to-br ${project.gradient} flex items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-black/20" aria-hidden="true"></div>
+            <div class="flex flex-col items-center justify-center text-white text-center p-4">
+              <i class="fas fa-star text-4xl mb-2" aria-hidden="true"></i>
+              <h4 class="font-bold text-lg">${project.title}</h4>
             </div>
           </div>
           <div class="p-5 md:p-6">
@@ -1065,8 +1060,8 @@
         item.className = 'timeline-item scroll-reveal mb-8 md:mb-12 relative';
         item.innerHTML = `
           <div class="flex items-start space-x-4 space-x-reverse">
-            <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full flex items-center justify-center text-white shadow-lg">
-              <i class="${exp.icon} text-lg" aria-hidden="true"></i>
+            <div class="flex-shrink-0 w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center text-white shadow-lg">
+              <i class="${exp.icon}" aria-hidden="true"></i>
             </div>
             <div class="bg-white dark:bg-gray-800 p-5 md:p-6 rounded-2xl shadow-xl flex-1 card-hover">
               <div class="flex justify-between items-start mb-2">
@@ -1163,8 +1158,8 @@
       }
       typedRole = new Typed('#typed-role', {
         strings: lang === 'fa' ? 
-          ['متخصص Unity | توسعه‌دهنده فول‌استک | متخصص امنیت بازی و اتوماسیون'] :
-          ['Unity Expert | Full Stack Developer | Game Security & Automation Specialist'],
+          ['توسعه‌دهنده فول‌استک | Unity Expert', 'متخصص هوش مصنوعی', 'کارشناس امنیت سایبری'] :
+          ['Full Stack Developer | Unity Expert', 'AI Automation Specialist', 'Cyber Security Expert'],
         typeSpeed: 80,
         backSpeed: 50,
         backDelay: 2000,
@@ -1206,8 +1201,8 @@
     // Initialize typed.js for role
     let typedRole = new Typed('#typed-role', {
       strings: currentLang === 'fa' ? 
-        ['متخصص Unity | توسعه‌دهنده فول‌استک | متخصص امنیت بازی و اتوماسیون'] :
-        ['Unity Expert | Full Stack Developer | Game Security & Automation Specialist'],
+        ['توسعه‌دهنده فول‌استک | Unity Expert', 'متخصص هوش مصنوعی', 'کارشناس امنیت سایبری'] :
+        ['Full Stack Developer | Unity Expert', 'AI Automation Specialist', 'Cyber Security Expert'],
       typeSpeed: 80,
       backSpeed: 50,
       backDelay: 2000,
