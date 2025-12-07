@@ -2,332 +2,346 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  
+  <!-- SEO & Meta Tags -->
+  <meta name="description" content="مهدی کلیداری - توسعه‌دهنده فول‌استک با 6+ سال تجربه در Unity، React، Laravel، امنیت سایبری و اتوماسیون هوشمند. پروژه‌های AAA و سیستم‌های مقیاس‌پذیر.">
+  <meta name="keywords" content="Unity Developer,React Developer,Laravel,Cyber Security,AI Automation,Full Stack Developer,Persian Programmer">
+  <meta name="author" content="Mahdi Klidari">
+  <meta name="robots" content="index,follow">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mahdi Klidari - Full Stack Developer & Unity Expert">
+  <meta property="og:description" content="توسعه‌دهنده فول‌استک | Unity Expert | متخصص امنیت سایبری و اتوماسیون هوشمند">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mahdiklidari.com">
+  <meta property="og:locale" content="fa_IR">
+  <meta property="og:locale:alternate" content="en_US">
+  
   <title>Mahdi Klidari - Full Stack Developer & Unity Expert</title>
+  
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: { extend: {} }
+    }
+  </script>
+  
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      overflow-x: hidden;
-      transition: background-color 0.5s, color 0.5s;
-    }
-    
-    .dark body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    }
-    
-    .gradient-text {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    
-    .parallax-bg {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+      overflow-x: hidden; 
+      transition: background-color 0.5s, color 0.5s; 
       position: relative;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
+      width: 100%;
+    }
+    .dark body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    
+    .gradient-text { 
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+      -webkit-background-clip: text; 
+      -webkit-text-fill-color: transparent; 
+      background-clip: text; 
     }
     
-    .parallax-bg::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="1" fill="white" opacity="0.1"/><circle cx="80" cy="40" r="1.5" fill="white" opacity="0.1"/><circle cx="40" cy="80" r="1" fill="white" opacity="0.1"/></svg>');
-      background-size: 100px 100px;
-      animation: float 20s infinite linear;
+    .parallax-bg { 
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+      position: relative; 
+      min-height: 100vh; 
+      display: flex; 
+      align-items: center; 
+      overflow: hidden;
     }
     
-    @keyframes float {
-      0% { transform: translate(0, 0); }
-      100% { transform: translate(-50px, -50px); }
+    .parallax-bg::before { 
+      content: ''; 
+      position: absolute; 
+      top: 0; 
+      left: 0; 
+      right: 0; 
+      bottom: 0; 
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="1" fill="white" opacity="0.1"/><circle cx="80" cy="40" r="1.5" fill="white" opacity="0.1"/><circle cx="40" cy="80" r="1" fill="white" opacity="0.1"/></svg>'); 
+      background-size: 100px 100px; 
+      animation: float 20s infinite linear; 
     }
     
-    .card-hover {
+    @keyframes float { 
+      0% { transform: translate(0, 0); } 
+      100% { transform: translate(-50px, -50px); } 
+    }
+    
+    .card-hover { 
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+    }
+    
+    .card-hover:hover { 
+      transform: translateY(-10px) scale(1.02); 
+    }
+    
+    .skill-progress { 
+      position: relative; 
+      overflow: hidden; 
+    }
+    
+    .skill-progress::after { 
+      content: ''; 
+      position: absolute; 
+      top: 0; 
+      left: 0; 
+      right: 0; 
+      bottom: 0; 
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); 
+      animation: shimmer 2s infinite; 
+    }
+    
+    @keyframes shimmer { 
+      0% { transform: translateX(-100%); } 
+      100% { transform: translateX(100%); } 
+    }
+    
+    .scroll-reveal { 
+      opacity: 0; 
+      transform: translateY(30px); 
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); 
+    }
+    
+    .scroll-reveal.revealed { 
+      opacity: 1; 
+      transform: translateY(0); 
+    }
+    
+    .mobile-menu { 
+      max-height: 0; 
+      overflow: hidden; 
+      transition: max-height 0.3s ease-out; 
+    }
+    
+    .mobile-menu.active { 
+      max-height: 500px; 
+    }
+    
+    .floating { 
+      animation: floating 3s ease-in-out infinite; 
+    }
+    
+    @keyframes floating { 
+      0% { transform: translateY(0px); } 
+      50% { transform: translateY(-15px); } 
+      100% { transform: translateY(0px); } 
+    }
+    
+    .language-btn { 
+      position: relative; 
+      overflow: hidden; 
+    }
+    
+    .language-btn::before { 
+      content: ''; 
+      position: absolute; 
+      top: 50%; 
+      left: 50%; 
+      width: 0; 
+      height: 0; 
+      background: rgba(255,255,255,0.3); 
+      border-radius: 50%; 
+      transform: translate(-50%, -50%); 
+      transition: width 0.6s, height 0.6s; 
+    }
+    
+    .language-btn:active::before { 
+      width: 300px; 
+      height: 300px; 
+    }
+    
+    .theme-toggle-wrapper { 
+      position: relative; 
+      width: 64px; 
+      height: 32px; 
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+      border-radius: 16px; 
+      cursor: pointer; 
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+      overflow: hidden; 
+    }
+    
+    .theme-toggle-wrapper.dark { 
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); 
+    }
+    
+    .theme-toggle-slider { 
+      position: absolute; 
+      top: 4px; 
+      left: 4px; 
+      width: 24px; 
+      height: 24px; 
+      background: white; 
+      border-radius: 50%; 
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      font-size: 14px; 
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2); 
+    }
+    
+    .theme-toggle-wrapper.dark .theme-toggle-slider { 
+      transform: translateX(32px); 
+    }
+    
+    .sun-icon { 
+      position: absolute; 
+      right: 8px; 
+      top: 50%; 
+      transform: translateY(-50%); 
+      font-size: 16px; 
+      transition: opacity 0.3s; 
+    }
+    
+    .moon-icon { 
+      position: absolute; 
+      left: 8px; 
+      top: 50%; 
+      transform: translateY(-50%); 
+      font-size: 16px; 
+      transition: opacity 0.3s; 
+      opacity: 0; 
+    }
+    
+    .theme-toggle-wrapper.dark .sun-icon { 
+      opacity: 0; 
+    }
+    
+    .theme-toggle-wrapper.dark .moon-icon { 
+      opacity: 1; 
+    }
+    
+    /* Cool Footer Buttons */
+    .footer-btn {
+      position: relative;
+      display: inline-block;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.2);
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    
-    .card-hover:hover {
-      transform: translateY(-10px) scale(1.02);
-    }
-    
-    .skill-progress {
-      position: relative;
       overflow: hidden;
     }
     
-    .skill-progress::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-      animation: shimmer 2s infinite;
+    .footer-btn:hover {
+      transform: translateY(-5px) scale(1.1);
+      background: rgba(99, 102, 241, 0.2);
+      box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
     }
     
-    @keyframes shimmer {
-      0% { transform: translateX(-100%); }
-      100% { transform: translateX(100%); }
-    }
-    
-    .scroll-reveal {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    
-    .scroll-reveal.revealed {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    
-    .mobile-menu {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease-out;
-    }
-    
-    .mobile-menu.active {
-      max-height: 500px;
-    }
-    
-    .floating {
-      animation: floating 3s ease-in-out infinite;
-    }
-    
-    @keyframes floating {
-      0% { transform: translateY(0px); }
-      50% { transform: translateY(-15px); }
-      100% { transform: translateY(0px); }
-    }
-    
-    .particle {
-      position: absolute;
-      pointer-events: none;
-      opacity: 0;
-      animation: particleFloat 3s ease-out forwards;
-    }
-    
-    @keyframes particleFloat {
-      0% {
-        opacity: 1;
-        transform: translate(0, 0) scale(0);
-      }
-      100% {
-        opacity: 0;
-        transform: translate(var(--x), var(--y)) scale(1);
-      }
-    }
-    
-    .language-btn {
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .language-btn::before {
+    .footer-btn::before {
       content: '';
       position: absolute;
       top: 50%;
       left: 50%;
       width: 0;
       height: 0;
-      background: rgba(255,255,255,0.3);
+      background: rgba(255,255,255,0.2);
       border-radius: 50%;
       transform: translate(-50%, -50%);
-      transition: width 0.6s, height 0.6s;
+      transition: width 0.4s, height 0.4s;
     }
     
-    .language-btn:active::before {
-      width: 300px;
-      height: 300px;
+    .footer-btn:hover::before {
+      width: 60px;
+      height: 60px;
     }
     
-    /* Dark Mode Toggle Animation */
-    .theme-toggle-wrapper {
+    .footer-btn i {
       position: relative;
-      width: 64px;
-      height: 32px;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      border-radius: 16px;
-      cursor: pointer;
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      overflow: hidden;
+      z-index: 1;
+      transition: transform 0.3s;
     }
     
-    .theme-toggle-wrapper.dark {
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    .footer-btn:hover i {
+      transform: scale(1.2);
     }
     
-    .theme-toggle-slider {
-      position: absolute;
-      top: 4px;
-      left: 4px;
-      width: 24px;
-      height: 24px;
-      background: white;
-      border-radius: 50%;
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    /* Fix for reduced motion */
+    @media (prefers-reduced-motion: reduce) { 
+      * { 
+        animation-duration: 0.01ms !important; 
+        animation-iteration-count: 1 !important; 
+        transition-duration: 0.01ms !important; 
+      } 
     }
     
-    .theme-toggle-wrapper.dark .theme-toggle-slider {
-      transform: translateX(32px);
-    }
-    
-    .sun-icon {
-      position: absolute;
-      right: 8px;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 16px;
-      transition: opacity 0.3s;
-    }
-    
-    .moon-icon {
-      position: absolute;
-      left: 8px;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 16px;
-      transition: opacity 0.3s;
-      opacity: 0;
-    }
-    
-    .theme-toggle-wrapper.dark .sun-icon {
-      opacity: 0;
-    }
-    
-    .theme-toggle-wrapper.dark .moon-icon {
-      opacity: 1;
-    }
-    
-    .chat-bubble {
-      animation: fadeInUp 0.5s ease-out;
-    }
-    
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
+    /* Responsive fixes */
+    @media (max-width: 768px) { 
+      .parallax-bg { 
+        min-height: 80vh; 
       }
-      to {
-        opacity: 1;
-        transform: translateY(0);
+      body {
+        overflow-x: hidden;
       }
     }
     
-    .typing-indicator span {
-      display: inline-block;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #667eea;
-      margin: 0 2px;
-      animation: bounce 1.4s infinite ease-in-out both;
+    /* Image styling for skills and projects */
+    .skill-img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      border-radius: 8px;
     }
     
-    .typing-indicator span:nth-child(1) { animation-delay: -0.32s; }
-    .typing-indicator span:nth-child(2) { animation-delay: -0.16s; }
-    
-    @keyframes bounce {
-      0%, 80%, 100% {
-        transform: scale(0);
-      }
-      40% {
-        transform: scale(1);
-      }
-    }
-    
-    @media (max-width: 768px) {
-      .parallax-bg {
-        min-height: 80vh;
-      }
+    .project-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   </style>
 </head>
 <body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-500">
 
-  <!-- Floating Chat Bot Button -->
-  <div id="chatButton" class="fixed bottom-6 right-6 z-50 bg-indigo-600 text-white w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center cursor-pointer shadow-2xl hover:scale-110 transition-transform duration-300">
-    <i class="fas fa-robot text-xl md:text-2xl"></i>
-    <div class="absolute -top-1 -right-1 w-5 h-5 bg-green-500 rounded-full animate-pulse"></div>
-  </div>
-
-  <!-- Chat Modal -->
-  <div id="chatModal" class="fixed bottom-24 right-6 z-50 w-80 md:w-96 h-96 md:h-[500px] bg-white dark:bg-gray-800 rounded-2xl shadow-2xl hidden flex-col">
-    <div class="bg-indigo-600 text-white p-4 rounded-t-2xl flex justify-between items-center">
-      <h3 class="font-bold text-sm md:text-base"><i class="fas fa-robot ml-2"></i> AI Assistant - Mahdi</h3>
-      <button id="closeChat" class="text-white hover:text-gray-300 text-xl"><i class="fas fa-times"></i></button>
-    </div>
-    <div id="chatMessages" class="flex-1 p-4 overflow-y-auto space-y-3">
-      <div class="chat-bubble bg-indigo-100 dark:bg-indigo-900 p-3 rounded-lg rounded-bl-none max-w-xs text-sm">
-        👋 سلام! من دستیار هوشمند مهدی هستم. در مورد مهارت‌ها، پروژه‌ها یا نحوه همکاری می‌تونم کمکتون کنم. چه سوالی دارید؟
-      </div>
-    </div>
-    <div class="p-4 border-t dark:border-gray-700">
-      <div class="flex space-x-2 space-x-reverse">
-        <input id="chatInput" type="text" placeholder="پیام خود را بنویسید..." class="flex-1 px-3 py-2 text-sm border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-gray-700 dark:border-gray-600">
-        <button id="sendMessage" class="bg-indigo-600 text-white px-3 py-2 rounded-lg hover:bg-indigo-700 transition">
-          <i class="fas fa-paper-plane"></i>
-        </button>
-      </div>
-    </div>
-  </div>
-
   <!-- Navbar -->
-  <nav class="bg-white dark:bg-gray-800 shadow-lg sticky top-0 z-40 transition-colors duration-500 backdrop-blur-lg bg-opacity-95 dark:bg-opacity-95">
+  <nav class="bg-white dark:bg-gray-800 shadow-lg sticky top-0 z-40 transition-colors duration-500 backdrop-blur-lg bg-opacity-95 dark:bg-opacity-95" 
+       role="navigation" aria-label="Main navigation">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-xl md:text-2xl font-bold gradient-text">Mahdi Klidari</h1>
+      <h1 class="text-xl md:text-2xl font-bold gradient-text" data-i18n="brand.name">Mahdi Klidari</h1>
       
       <!-- Desktop Menu -->
       <div class="hidden md:flex items-center space-x-6 space-x-reverse">
         <div class="flex items-center space-x-4 space-x-reverse">
           <!-- Language Switcher -->
-          <button id="langSwitch" class="language-btn bg-indigo-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-indigo-700 transition-all duration-300 flex items-center space-x-2 space-x-reverse text-sm">
-            <i class="fas fa-language text-base"></i>
+          <button id="langSwitch" class="language-btn bg-indigo-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-indigo-700 transition-all duration-300 flex items-center space-x-2 space-x-reverse text-sm" 
+                  aria-label="Switch language">
+            <i class="fas fa-language text-base" aria-hidden="true"></i>
             <span id="langText">EN</span>
           </button>
           
           <!-- Theme Toggle -->
-          <div id="themeToggle" class="theme-toggle-wrapper">
-            <div class="sun-icon">☀️</div>
-            <div class="moon-icon">🌙</div>
+          <div id="themeToggle" class="theme-toggle-wrapper" role="switch" aria-checked="false" aria-label="Toggle dark mode">
+            <div class="sun-icon" aria-hidden="true">☀️</div>
+            <div class="moon-icon" aria-hidden="true">🌙</div>
             <div class="theme-toggle-slider"></div>
           </div>
         </div>
         
         <div class="flex space-x-6 space-x-reverse">
-          <a href="#about" class="nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition font-medium">درباره من</a>
-          <a href="#skills" class="nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition font-medium">مهارت‌ها</a>
-          <a href="#projects" class="nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition font-medium">پروژه‌ها</a>
-          <a href="#experience" class="nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition font-medium">تجربیات</a>
-          <a href="#contact" class="nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition font-medium">تماس</a>
+          <a href="#about" class="nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition font-medium" data-i18n="nav.about">درباره من</a>
+          <a href="#skills" class="nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition font-medium" data-i18n="nav.skills">مهارت‌ها</a>
+          <a href="#projects" class="nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition font-medium" data-i18n="nav.projects">پروژه‌ها</a>
+          <a href="#experience" class="nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition font-medium" data-i18n="nav.experience">تجربیات</a>
+          <a href="#contact" class="nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition font-medium" data-i18n="nav.contact">تماس</a>
         </div>
       </div>
       
       <!-- Mobile Menu Button -->
-      <button id="mobileMenuBtn" class="md:hidden text-gray-700 dark:text-gray-300 text-2xl">
-        <i class="fas fa-bars"></i>
+      <button id="mobileMenuBtn" class="md:hidden text-gray-700 dark:text-gray-300 text-2xl" 
+              aria-label="Open mobile menu" aria-expanded="false">
+        <i class="fas fa-bars" aria-hidden="true"></i>
       </button>
     </div>
     
@@ -336,30 +350,31 @@
       <div class="px-4 py-3 space-y-3">
         <div class="flex items-center justify-between mb-3">
           <!-- Mobile Language Switcher -->
-          <button id="langSwitchMobile" class="language-btn bg-indigo-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-indigo-700 transition-all duration-300 flex items-center space-x-2 space-x-reverse text-sm">
-            <i class="fas fa-language text-base"></i>
+          <button id="langSwitchMobile" class="language-btn bg-indigo-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-indigo-700 transition-all duration-300 flex items-center space-x-2 space-x-reverse text-sm" 
+                  aria-label="Switch language on mobile">
+            <i class="fas fa-language text-base" aria-hidden="true"></i>
             <span id="langTextMobile">EN</span>
           </button>
           
           <!-- Mobile Theme Toggle -->
-          <div id="themeToggleMobile" class="theme-toggle-wrapper">
-            <div class="sun-icon">☀️</div>
-            <div class="moon-icon">🌙</div>
+          <div id="themeToggleMobile" class="theme-toggle-wrapper" role="switch" aria-checked="false" aria-label="Toggle dark mode on mobile">
+            <div class="sun-icon" aria-hidden="true">☀️</div>
+            <div class="moon-icon" aria-hidden="true">🌙</div>
             <div class="theme-toggle-slider"></div>
           </div>
         </div>
         
-        <a href="#about" class="block nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition py-2">درباره من</a>
-        <a href="#skills" class="block nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition py-2">مهارت‌ها</a>
-        <a href="#projects" class="block nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition py-2">پروژه‌ها</a>
-        <a href="#experience" class="block nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition py-2">تجربیات</a>
-        <a href="#contact" class="block nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition py-2">تماس</a>
+        <a href="#about" class="block nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition py-2" data-i18n="nav.about">درباره من</a>
+        <a href="#skills" class="block nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition py-2" data-i18n="nav.skills">مهارت‌ها</a>
+        <a href="#projects" class="block nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition py-2" data-i18n="nav.projects">پروژه‌ها</a>
+        <a href="#experience" class="block nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition py-2" data-i18n="nav.experience">تجربیات</a>
+        <a href="#contact" class="block nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition py-2" data-i18n="nav.contact">تماس</a>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="parallax-bg">
+  <section class="parallax-bg" role="banner">
     <div class="container mx-auto px-4 py-16 md:py-20 relative z-10">
       <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
         <div class="text-center md:text-right">
@@ -367,24 +382,28 @@
             <span id="typed-name"></span>
           </h1>
           <p class="text-xl md:text-2xl text-white/90 mb-6">
-            <span id="typed-role"></span>
+            <span id="typed-role" data-i18n="hero.role">توسعه‌دهنده فول‌استک | Unity Expert | متخصص اتوماسیون هوشمند</span>
           </p>
           <div class="flex flex-wrap justify-center md:justify-start gap-3 md:gap-4">
-            <a href="#contact" class="bg-white text-indigo-600 px-6 md:px-8 py-3 md:py-4 rounded-full font-bold hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-xl flex items-center space-x-2 space-x-reverse text-sm md:text-base">
-              <i class="fas fa-rocket"></i>
+            <a href="#contact" class="bg-white text-indigo-600 px-6 md:px-8 py-3 md:py-4 rounded-full font-bold hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-xl flex items-center space-x-2 space-x-reverse text-sm md:text-base" 
+               aria-label="Start collaboration" data-i18n="hero.cta1">
+              <i class="fas fa-rocket" aria-hidden="true"></i>
               <span>شروع همکاری</span>
             </a>
-            <a href="https://t.me/BK_1ir" target="_blank" class="bg-white/20 backdrop-blur text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-bold hover:bg-white/30 transform hover:scale-105 transition-all duration-300 border border-white/30 flex items-center space-x-2 space-x-reverse text-sm md:text-base">
-              <i class="fab fa-telegram"></i>
+            <a href="https://t.me/BK_1ir" target="_blank" rel="noopener noreferrer" 
+               class="bg-white/20 backdrop-blur text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-bold hover:bg-white/30 transform hover:scale-105 transition-all duration-300 border border-white/30 flex items-center space-x-2 space-x-reverse text-sm md:text-base" 
+               aria-label="Contact via Telegram" data-i18n="hero.cta2">
+              <i class="fab fa-telegram" aria-hidden="true"></i>
               <span>تماس تلگرام</span>
             </a>
           </div>
         </div>
         <div class="flex justify-center">
           <div class="relative">
-            <div class="w-72 h-72 md:w-96 md:h-96 bg-white/10 backdrop-blur rounded-full flex items-center justify-center floating relative">
-              <div class="absolute inset-0 rounded-full border-4 border-white/20 animate-spin" style="animation-duration: 15s;"></div>
-              <i class="fas fa-code text-6xl md:text-9xl text-white/80"></i>
+            <div class="w-72 h-72 md:w-96 md:h-96 bg-white/10 backdrop-blur rounded-full flex items-center justify-center floating relative" 
+                 role="img" aria-label="Code icon">
+              <div class="absolute inset-0 rounded-full border-4 border-white/20 animate-spin" style="animation-duration: 15s;" aria-hidden="true"></div>
+              <i class="fas fa-code text-6xl md:text-9xl text-white/80" aria-hidden="true"></i>
             </div>
           </div>
         </div>
@@ -396,7 +415,7 @@
   <section id="about" class="py-16 md:py-20 bg-white dark:bg-gray-800 transition-colors duration-500">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl md:text-5xl font-bold text-center mb-12 md:mb-16 scroll-reveal">
-        <span class="gradient-text">درباره من</span>
+        <span class="gradient-text" data-i18n="about.title">درباره من</span>
       </h2>
       <div class="max-w-6xl mx-auto">
         <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
@@ -404,26 +423,20 @@
             <div class="relative">
               <div class="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl p-1 transform rotate-3 hover:rotate-0 transition-transform duration-500">
                 <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 md:p-8">
-                  <h3 class="text-2xl font-bold mb-4 text-gray-800 dark:text-white">چرا باید با من کار کنی؟</h3>
-                  <ul class="space-y-3 text-gray-600 dark:text-gray-300 text-sm md:text-base">
-                    <li class="flex items-start"><i class="fas fa-check-circle text-indigo-500 ml-3 mt-1 flex-shrink-0"></i> <span>بیش از 6 سال تجربه برنامه‌نویسی حرفه‌ای</span></li>
-                    <li class="flex items-start"><i class="fas fa-check-circle text-indigo-500 ml-3 mt-1 flex-shrink-0"></i> <span>تخصص در Unity, React, Laravel, Python</span></li>
-                    <li class="flex items-start"><i class="fas fa-check-circle text-indigo-500 ml-3 mt-1 flex-shrink-0"></i> <span>تسلط بر هوش مصنوعی و اتوماسیون با n8n</span></li>
-                    <li class="flex items-start"><i class="fas fa-check-circle text-indigo-500 ml-3 mt-1 flex-shrink-0"></i> <span>متخصص امنیت سایبری و تست نفوذ</span></li>
+                  <h3 class="text-2xl font-bold mb-4 text-gray-800 dark:text-white" data-i18n="about.subtitle">چرا باید با من کار کنی؟</h3>
+                  <ul class="space-y-3 text-gray-600 dark:text-gray-300 text-sm md:text-base" id="aboutPoints">
+                    <!-- Populated by JS -->
                   </ul>
                 </div>
               </div>
             </div>
           </div>
           <div class="scroll-reveal text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed space-y-4 text-justify">
-            <p>
-              من <strong class="text-indigo-600 dark:text-indigo-400">مهدی کلیداری</strong> هستم، یک توسعه‌دهنده فول‌استک که عاشق خلق تجربه‌های دیجیتالی بی‌نظیره. 
-              از <strong>توسعه بازی‌های AAA با Unity</strong> تا ساخت <strong>وب‌اپلیکیشن‌های مقیاس‌پذیر</strong> با React و Laravel، 
-              همیشه به دنبال کد تمیز، بهینه و نوآورانه هستم.
+            <p id="aboutDesc1" data-i18n="about.description1">
+              من مهدی کلیداری هستم، یک توسعه‌دهنده فول‌استک که عاشق خلق تجربه‌های دیجیتالی بی‌نظیره. از توسعه بازی‌های AAA با Unity تا ساخت وب‌اپلیکیشن‌های مقیاس‌پذیر با React و Laravel، همیشه به دنبال کد تمیز، بهینه و نوآورانه هستم.
             </p>
-            <p>
-              تسلط من بر <strong>هوش مصنوعی و اتوماسیون با n8n</strong> بهم این اجازه رو میده که سیستم‌های هوشمند بسازم. 
-              همچنین تخصص من در <strong>امنیت سایبری</strong> باعث میشه محصولاتی تحویل بدم که نه تنها زیبا، بلکه کاملاً امن هستن.
+            <p id="aboutDesc2" data-i18n="about.description2">
+              تسلط من بر هوش مصنوعی و اتوماسیون با n8n بهم این اجازه رو میده که سیستم‌های هوشمند بسازم. همچنین تخصص من در امنیت سایبری باعث میشه محصولاتی تحویل بدم که نه تنها زیبا، بلکه کاملاً امن هستن.
             </p>
             <div class="flex flex-wrap gap-2 mt-6 justify-center md:justify-start">
               <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-300 rounded-full text-xs md:text-sm">#UnityExpert</span>
@@ -441,162 +454,10 @@
   <section id="skills" class="py-16 md:py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-500">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl md:text-5xl font-bold text-center mb-12 md:mb-16 scroll-reveal">
-        <span class="gradient-text">مهارت‌های تخصصی</span>
+        <span class="gradient-text" data-i18n="skills.title">مهارت‌های تخصصی</span>
       </h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-7xl mx-auto">
-        
-        <!-- Unity & C# -->
-        <div class="skill-card card-hover bg-white dark:bg-gray-800 rounded-2xl p-4 md:p-6 shadow-xl scroll-reveal">
-          <div class="flex justify-between items-center mb-3">
-            <div class="flex items-center space-x-3 space-x-reverse">
-              <i class="fab fa-unity text-3xl md:text-4xl text-indigo-600"></i>
-              <div>
-                <div class="font-bold text-lg text-gray-800 dark:text-white">Unity (C#)</div>
-                <div class="text-xs text-gray-500">Game Development</div>
-              </div>
-            </div>
-            <span class="text-xl md:text-2xl font-bold text-indigo-600">100%</span>
-          </div>
-          <div class="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-            <div class="skill-progress h-full bg-gradient-to-r from-indigo-500 to-purple-600" style="width: 100%"></div>
-          </div>
-        </div>
-
-        <!-- C/C++ -->
-        <div class="skill-card card-hover bg-white dark:bg-gray-800 rounded-2xl p-4 md:p-6 shadow-xl scroll-reveal">
-          <div class="flex justify-between items-center mb-3">
-            <div class="flex items-center space-x-3 space-x-reverse">
-              <i class="fas fa-code text-3xl md:text-4xl text-blue-600"></i>
-              <div>
-                <div class="font-bold text-lg text-gray-800 dark:text-white">C / C++</div>
-                <div class="text-xs text-gray-500">System Programming</div>
-              </div>
-            </div>
-            <span class="text-xl md:text-2xl font-bold text-blue-600">85%</span>
-          </div>
-          <div class="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-            <div class="skill-progress h-full bg-gradient-to-r from-blue-500 to-cyan-600" style="width: 85%"></div>
-          </div>
-        </div>
-
-        <!-- React -->
-        <div class="skill-card card-hover bg-white dark:bg-gray-800 rounded-2xl p-4 md:p-6 shadow-xl scroll-reveal">
-          <div class="flex justify-between items-center mb-3">
-            <div class="flex items-center space-x-3 space-x-reverse">
-              <i class="fab fa-react text-3xl md:text-4xl text-cyan-600"></i>
-              <div>
-                <div class="font-bold text-lg text-gray-800 dark:text-white">React</div>
-                <div class="text-xs text-gray-500">Frontend Framework</div>
-              </div>
-            </div>
-            <span class="text-xl md:text-2xl font-bold text-cyan-600">90%</span>
-          </div>
-          <div class="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-            <div class="skill-progress h-full bg-gradient-to-r from-cyan-500 to-blue-600" style="width: 90%"></div>
-          </div>
-        </div>
-
-        <!-- Laravel -->
-        <div class="skill-card card-hover bg-white dark:bg-gray-800 rounded-2xl p-4 md:p-6 shadow-xl scroll-reveal">
-          <div class="flex justify-between items-center mb-3">
-            <div class="flex items-center space-x-3 space-x-reverse">
-              <i class="fab fa-laravel text-3xl md:text-4xl text-red-600"></i>
-              <div>
-                <div class="font-bold text-lg text-gray-800 dark:text-white">Laravel</div>
-                <div class="text-xs text-gray-500">PHP Framework</div>
-              </div>
-            </div>
-            <span class="text-xl md:text-2xl font-bold text-red-600">85%</span>
-          </div>
-          <div class="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-            <div class="skill-progress h-full bg-gradient-to-r from-red-500 to-pink-600" style="width: 85%"></div>
-          </div>
-        </div>
-
-        <!-- Python -->
-        <div class="skill-card card-hover bg-white dark:bg-gray-800 rounded-2xl p-4 md:p-6 shadow-xl scroll-reveal">
-          <div class="flex justify-between items-center mb-3">
-            <div class="flex items-center space-x-3 space-x-reverse">
-              <i class="fab fa-python text-3xl md:text-4xl text-green-600"></i>
-              <div>
-                <div class="font-bold text-lg text-gray-800 dark:text-white">Python</div>
-                <div class="text-xs text-gray-500">AI & Security</div>
-              </div>
-            </div>
-            <span class="text-xl md:text-2xl font-bold text-green-600">80%</span>
-          </div>
-          <div class="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-            <div class="skill-progress h-full bg-gradient-to-r from-green-500 to-emerald-600" style="width: 80%"></div>
-          </div>
-        </div>
-
-        <!-- n8n -->
-        <div class="skill-card card-hover bg-white dark:bg-gray-800 rounded-2xl p-4 md:p-6 shadow-xl scroll-reveal">
-          <div class="flex justify-between items-center mb-3">
-            <div class="flex items-center space-x-3 space-x-reverse">
-              <i class="fas fa-cogs text-3xl md:text-4xl text-purple-600"></i>
-              <div>
-                <div class="font-bold text-lg text-gray-800 dark:text-white">n8n</div>
-                <div class="text-xs text-gray-500">Automation</div>
-              </div>
-            </div>
-            <span class="text-xl md:text-2xl font-bold text-purple-600">75%</span>
-          </div>
-          <div class="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-            <div class="skill-progress h-full bg-gradient-to-r from-purple-500 to-pink-600" style="width: 75%"></div>
-          </div>
-        </div>
-
-        <!-- HTML/CSS/JS -->
-        <div class="skill-card card-hover bg-white dark:bg-gray-800 rounded-2xl p-4 md:p-6 shadow-xl scroll-reveal">
-          <div class="flex justify-between items-center mb-3">
-            <div class="flex items-center space-x-3 space-x-reverse">
-              <i class="fab fa-js text-3xl md:text-4xl text-yellow-500"></i>
-              <div>
-                <div class="font-bold text-lg text-gray-800 dark:text-white">HCJ Stack</div>
-                <div class="text-xs text-gray-500">HTML/CSS/JS</div>
-              </div>
-            </div>
-            <span class="text-xl md:text-2xl font-bold text-yellow-600">95%</span>
-          </div>
-          <div class="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-            <div class="skill-progress h-full bg-gradient-to-r from-yellow-500 to-orange-600" style="width: 95%"></div>
-          </div>
-        </div>
-
-        <!-- Security -->
-        <div class="skill-card card-hover bg-white dark:bg-gray-800 rounded-2xl p-4 md:p-6 shadow-xl scroll-reveal">
-          <div class="flex justify-between items-center mb-3">
-            <div class="flex items-center space-x-3 space-x-reverse">
-              <i class="fas fa-shield-alt text-3xl md:text-4xl text-red-600"></i>
-              <div>
-                <div class="font-bold text-lg text-gray-800 dark:text-white">Penetration Testing</div>
-                <div class="text-xs text-gray-500">Cyber Security</div>
-              </div>
-            </div>
-            <span class="text-xl md:text-2xl font-bold text-red-600">70%</span>
-          </div>
-          <div class="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-            <div class="skill-progress h-full bg-gradient-to-r from-red-500 to-orange-600" style="width: 70%"></div>
-          </div>
-        </div>
-
-        <!-- PHP -->
-        <div class="skill-card card-hover bg-white dark:bg-gray-800 rounded-2xl p-4 md:p-6 shadow-xl scroll-reveal">
-          <div class="flex justify-between items-center mb-3">
-            <div class="flex items-center space-x-3 space-x-reverse">
-              <i class="fab fa-php text-3xl md:text-4xl text-indigo-600"></i>
-              <div>
-                <div class="font-bold text-lg text-gray-800 dark:text-white">PHP</div>
-                <div class="text-xs text-gray-500">Backend Development</div>
-              </div>
-            </div>
-            <span class="text-xl md:text-2xl font-bold text-indigo-600">80%</span>
-          </div>
-          <div class="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-            <div class="skill-progress h-full bg-gradient-to-r from-indigo-500 to-blue-600" style="width: 80%"></div>
-          </div>
-        </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-7xl mx-auto" id="skillsContainer">
+        <!-- Populated by JS -->
       </div>
     </div>
   </section>
@@ -605,111 +466,10 @@
   <section id="projects" class="py-16 md:py-20 bg-white dark:bg-gray-800 transition-colors duration-500">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl md:text-5xl font-bold text-center mb-12 md:mb-16 scroll-reveal">
-        <span class="gradient-text">پروژه‌های برجسته</span>
+        <span class="gradient-text" data-i18n="projects.title">پروژه‌های برجسته</span>
       </h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
-        
-        <!-- Project 1: Unity Game -->
-        <div class="project-card card-hover bg-gray-50 dark:bg-gray-900 rounded-2xl overflow-hidden shadow-xl scroll-reveal">
-          <div class="h-48 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center relative">
-            <div class="absolute inset-0 bg-black/20"></div>
-            <i class="fas fa-gamepad text-5xl md:text-6xl text-white/80 relative z-10"></i>
-          </div>
-          <div class="p-5 md:p-6">
-            <h3 class="text-lg md:text-xl font-bold mb-2 text-gray-800 dark:text-white">بازی اکشن 3D - Unity</h3>
-            <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">پلتفرمر اکشن با گرافیک AAA، فیزیک پیشرفته، AI دشمنان و سیستم مولتی‌پلیر</p>
-            <div class="flex flex-wrap gap-1 mb-3">
-              <span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-300 rounded text-xs">Unity</span>
-              <span class="px-2 py-1 bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300 rounded text-xs">C#</span>
-              <span class="px-2 py-1 bg-pink-100 dark:bg-pink-900 text-pink-600 dark:text-pink-300 rounded text-xs">Photon</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 2: Security Tool -->
-        <div class="project-card card-hover bg-gray-50 dark:bg-gray-900 rounded-2xl overflow-hidden shadow-xl scroll-reveal">
-          <div class="h-48 bg-gradient-to-br from-red-500 to-orange-600 flex items-center justify-center relative">
-            <div class="absolute inset-0 bg-black/20"></div>
-            <i class="fas fa-shield-alt text-5xl md:text-6xl text-white/80 relative z-10"></i>
-          </div>
-          <div class="p-5 md:p-6">
-            <h3 class="text-lg md:text-xl font-bold mb-2 text-gray-800 dark:text-white">Security Scanner Suite</h3>
-            <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">ابزار جامع تست نفوذ با اسکن خودکار آسیب‌پذیری‌ها و گزارش‌گیری حرفه‌ای</p>
-            <div class="flex flex-wrap gap-1 mb-3">
-              <span class="px-2 py-1 bg-red-100 dark:bg-red-900 text-red-600 dark:text-red-300 rounded text-xs">Python</span>
-              <span class="px-2 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-600 dark:text-yellow-300 rounded text-xs">React</span>
-              <span class="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 rounded text-xs">OWASP</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 3: AI Automation -->
-        <div class="project-card card-hover bg-gray-50 dark:bg-gray-900 rounded-2xl overflow-hidden shadow-xl scroll-reveal">
-          <div class="h-48 bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center relative">
-            <div class="absolute inset-0 bg-black/20"></div>
-            <i class="fas fa-robot text-5xl md:text-6xl text-white/80 relative z-10"></i>
-          </div>
-          <div class="p-5 md:p-6">
-            <h3 class="text-lg md:text-xl font-bold mb-2 text-gray-800 dark:text-white">AI Automation System</h3>
-            <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">سیستم اتوماسیون هوشمند با n8n برای مدیریت workflows و ادغام AI</p>
-            <div class="flex flex-wrap gap-1 mb-3">
-              <span class="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 rounded text-xs">n8n</span>
-              <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 rounded text-xs">Node.js</span>
-              <span class="px-2 py-1 bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300 rounded text-xs">API</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 4: E-commerce -->
-        <div class="project-card card-hover bg-gray-50 dark:bg-gray-900 rounded-2xl overflow-hidden shadow-xl scroll-reveal">
-          <div class="h-48 bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center relative">
-            <div class="absolute inset-0 bg-black/20"></div>
-            <i class="fas fa-shopping-cart text-5xl md:text-6xl text-white/80 relative z-10"></i>
-          </div>
-          <div class="p-5 md:p-6">
-            <h3 class="text-lg md:text-xl font-bold mb-2 text-gray-800 dark:text-white">E-Commerce Platform</h3>
-            <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">پلتفرم فروشگاهی کامل با پنل ادمین پیشرفته و سیستم پرداخت</p>
-            <div class="flex flex-wrap gap-1 mb-3">
-              <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 rounded text-xs">Laravel</span>
-              <span class="px-2 py-1 bg-cyan-100 dark:bg-cyan-900 text-cyan-600 dark:text-cyan-300 rounded text-xs">Vue.js</span>
-              <span class="px-2 py-1 bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300 rounded text-xs">MySQL</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 5: Analytics Dashboard -->
-        <div class="project-card card-hover bg-gray-50 dark:bg-gray-900 rounded-2xl overflow-hidden shadow-xl scroll-reveal">
-          <div class="h-48 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center relative">
-            <div class="absolute inset-0 bg-black/20"></div>
-            <i class="fas fa-chart-line text-5xl md:text-6xl text-white/80 relative z-10"></i>
-          </div>
-          <div class="p-5 md:p-6">
-            <h3 class="text-lg md:text-xl font-bold mb-2 text-gray-800 dark:text-white">Analytics Dashboard</h3>
-            <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">داشبورد تحلیل داده‌های تجاری با نمودارهای زنده و گزارش‌گیری پیشرفته</p>
-            <div class="flex flex-wrap gap-1 mb-3">
-              <span class="px-2 py-1 bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300 rounded text-xs">React</span>
-              <span class="px-2 py-1 bg-pink-100 dark:bg-pink-900 text-pink-600 dark:text-pink-300 rounded text-xs">Chart.js</span>
-              <span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-300 rounded text-xs">API</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 6: Mobile App -->
-        <div class="project-card card-hover bg-gray-50 dark:bg-gray-900 rounded-2xl overflow-hidden shadow-xl scroll-reveal">
-          <div class="h-48 bg-gradient-to-br from-yellow-500 to-orange-600 flex items-center justify-center relative">
-            <div class="absolute inset-0 bg-black/20"></div>
-            <i class="fas fa-mobile-alt text-5xl md:text-6xl text-white/80 relative z-10"></i>
-          </div>
-          <div class="p-5 md:p-6">
-            <h3 class="text-lg md:text-xl font-bold mb-2 text-gray-800 dark:text-white">Social Media App</h3>
-            <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">اپلیکیشن شبکه اجتماعی کراس‌پلتفرم با React Native</p>
-            <div class="flex flex-wrap gap-1 mb-3">
-              <span class="px-2 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-600 dark:text-yellow-300 rounded text-xs">React Native</span>
-              <span class="px-2 py-1 bg-orange-100 dark:bg-orange-900 text-orange-600 dark:text-orange-300 rounded text-xs">Firebase</span>
-              <span class="px-2 py-1 bg-red-100 dark:bg-red-900 text-red-600 dark:text-red-300 rounded text-xs">Redux</span>
-            </div>
-          </div>
-        </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto" id="projectsContainer">
+        <!-- Populated by JS -->
       </div>
     </div>
   </section>
@@ -718,57 +478,10 @@
   <section id="experience" class="py-16 md:py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-500">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl md:text-5xl font-bold text-center mb-12 md:mb-16 scroll-reveal">
-        <span class="gradient-text">تجربیات حرفه‌ای</span>
+        <span class="gradient-text" data-i18n="experience.title">تجربیات حرفه‌ای</span>
       </h2>
-      <div class="max-w-5xl mx-auto">
-        
-        <div class="timeline-item scroll-reveal mb-8 md:mb-12 relative">
-          <div class="flex items-start space-x-4 space-x-reverse">
-            <div class="flex-shrink-0 w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center text-white shadow-lg">
-              <i class="fas fa-gamepad"></i>
-            </div>
-            <div class="bg-white dark:bg-gray-800 p-5 md:p-6 rounded-2xl shadow-xl flex-1 card-hover">
-              <div class="flex justify-between items-start mb-2">
-                <h3 class="text-lg md:text-xl font-bold text-gray-800 dark:text-white">توسعه‌دهنده ارشد بازی (Unity)</h3>
-                <span class="text-xs md:text-sm text-gray-500 dark:text-gray-400">2022 - حال</span>
-              </div>
-              <p class="text-indigo-600 dark:text-indigo-400 text-sm mb-2">استودیو مستقل بازی‌سازی</p>
-              <p class="text-gray-600 dark:text-gray-300 text-sm">توسعه بازی‌های AAA با Unity، بهینه‌سازی Performance و گرافیک، پیاده‌سازی سیستم‌های چندنفره آنلاین با Photon</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item scroll-reveal mb-8 md:mb-12 relative">
-          <div class="flex items-start space-x-4 space-x-reverse">
-            <div class="flex-shrink-0 w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white shadow-lg">
-              <i class="fas fa-code"></i>
-            </div>
-            <div class="bg-white dark:bg-gray-800 p-5 md:p-6 rounded-2xl shadow-xl flex-1 card-hover">
-              <div class="flex justify-between items-start mb-2">
-                <h3 class="text-lg md:text-xl font-bold text-gray-800 dark:text-white">توسعه‌دهنده فول‌استک</h3>
-                <span class="text-xs md:text-sm text-gray-500 dark:text-gray-400">2020 - 2022</span>
-              </div>
-              <p class="text-purple-600 dark:text-purple-400 text-sm mb-2">شرکت فناوری اطلاعات برتر</p>
-              <p class="text-gray-600 dark:text-gray-300 text-sm">طراحی معماری سیستم‌های تحت وب، توسعه API‌های RESTful، پیاده‌سازی CI/CD و اتوماسیون با n8n</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item scroll-reveal mb-8 md:mb-12 relative">
-          <div class="flex items-start space-x-4 space-x-reverse">
-            <div class="flex-shrink-0 w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white shadow-lg">
-              <i class="fas fa-shield-alt"></i>
-            </div>
-            <div class="bg-white dark:bg-gray-800 p-5 md:p-6 rounded-2xl shadow-xl flex-1 card-hover">
-              <div class="flex justify-between items-start mb-2">
-                <h3 class="text-lg md:text-xl font-bold text-gray-800 dark:text-white">کارشناس امنیت سایبری</h3>
-                <span class="text-xs md:text-sm text-gray-500 dark:text-gray-400">2019 - 2020</span>
-              </div>
-              <p class="text-red-600 dark:text-red-400 text-sm mb-2">شرکت امنیت سایبری</p>
-              <p class="text-gray-600 dark:text-gray-300 text-sm">ارزیابی امنیت برنامه‌ها، تست نفوذ پیشرفته، پیاده‌سازی راهکارهای امنیتی و آموزش تیم</p>
-            </div>
-          </div>
-        </div>
+      <div class="max-w-5xl mx-auto" id="experienceContainer">
+        <!-- Populated by JS -->
       </div>
     </div>
   </section>
@@ -777,107 +490,636 @@
   <section id="contact" class="py-16 md:py-20 bg-white dark:bg-gray-800 transition-colors duration-500">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl md:text-5xl font-bold text-center mb-12 md:mb-16 scroll-reveal">
-        <span class="gradient-text">بیایید همکاری کنیم</span>
+        <span class="gradient-text" data-i18n="contact.title">بیایید همکاری کنیم</span>
       </h2>
       <div class="max-w-5xl mx-auto">
         <div class="grid md:grid-cols-2 gap-8 md:gap-12">
           <div class="scroll-reveal space-y-6">
-            <h3 class="text-xl md:text-2xl font-bold mb-2 text-gray-800 dark:text-white">پروژه بعدی رو باهم بسازیم</h3>
-            <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base">
-              اگه دنبال توسعه‌دهنده‌ای حرفه‌ای می‌گردید که کد تمیز، راهکارهای خلاقانه و تحویل سریع داشته باشه، 
-              من اینجام تا پروژه‌تون رو به واقعیت تبدیل کنم. از ایده‌هاتون بگید تا یه چیز خفن بسازیم!
+            <h3 class="text-xl md:text-2xl font-bold mb-2 text-gray-800 dark:text-white" data-i18n="contact.subtitle">پروژه بعدی رو باهم بسازیم</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base" id="contactDesc" data-i18n="contact.description">
+              اگه دنبال توسعه‌دهنده‌ای حرفه‌ای می‌گردید که کد تمیز، راهکارهای خلاقانه و تحویل سریع داشته باشه، من اینجام تا پروژه‌تون رو به واقعیت تبدیل کنم. از ایده‌هاتون بگید تا یه چیز خفن بسازیم!
             </p>
-            <div class="space-y-4">
-              <div class="flex items-center space-x-3 space-x-reverse">
-                <div class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900 rounded-full flex items-center justify-center flex-shrink-0">
-                  <i class="fas fa-envelope text-indigo-600 dark:text-indigo-300"></i>
-                </div>
-                <div>
-                  <p class="text-xs text-gray-500 dark:text-gray-400">ایمیل</p>
-                  <p class="font-medium text-gray-800 dark:text-white">unity.tim.ir@gmail.com</p>
-                </div>
-              </div>
-              <div class="flex items-center space-x-3 space-x-reverse">
-                <div class="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center flex-shrink-0">
-                  <i class="fas fa-phone text-green-600 dark:text-green-300"></i>
-                </div>
-                <div>
-                  <p class="text-xs text-gray-500 dark:text-gray-400">تماس مستقیم</p>
-                  <a href="tel:09211243320" class="font-medium text-gray-800 dark:text-white hover:text-indigo-600">0921 124 3320</a>
-                </div>
-              </div>
-              <div class="flex items-center space-x-3 space-x-reverse">
-                <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center flex-shrink-0">
-                  <i class="fab fa-telegram text-blue-600 dark:text-blue-300"></i>
-                </div>
-                <div>
-                  <p class="text-xs text-gray-500 dark:text-gray-400">تلگرام</p>
-                  <a href="https://t.me/BK_1ir" target="_blank" class="font-medium text-gray-800 dark:text-white hover:text-indigo-600">@BK_1ir</a>
-                </div>
-              </div>
+            <div class="space-y-4" id="contactInfo">
+              <!-- Populated by JS -->
             </div>
           </div>
           
-          <!-- Telegram Contact Form -->
+          <!-- Contact Form -->
           <div class="scroll-reveal bg-gray-50 dark:bg-gray-900 p-6 md:p-8 rounded-2xl shadow-xl">
-            <h3 class="text-lg md:text-xl font-bold mb-4 text-gray-800 dark:text-white">فرم تماس سریع</h3>
-            <div class="space-y-4">
-              <input id="contactName" type="text" placeholder="نام شما" class="w-full px-4 py-3 rounded-lg border dark:border-gray-700 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm">
-              <input id="contactPhone" type="tel" placeholder="شماره تماس شما" class="w-full px-4 py-3 rounded-lg border dark:border-gray-700 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm">
-              <textarea id="contactMessage" placeholder="توضیحات پروژه..." rows="4" class="w-full px-4 py-3 rounded-lg border dark:border-gray-700 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm"></textarea>
-              <button id="sendTelegram" class="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-3 rounded-lg font-bold hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2 space-x-reverse text-sm">
-                <i class="fab fa-telegram"></i>
-                <span>ارسال به تلگرام</span>
+            <h3 class="text-lg md:text-xl font-bold mb-4 text-gray-800 dark:text-white" data-i18n="contact.formTitle">فرم تماس سریع</h3>
+            <form id="contactForm" class="space-y-4">
+              <input id="contactName" type="text" placeholder="نام شما" required
+                     class="w-full px-4 py-3 rounded-lg border dark:border-gray-700 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm" 
+                     aria-required="true" minlength="2" maxlength="50">
+              <input id="contactPhone" type="tel" placeholder="شماره تماس شما" required
+                     class="w-full px-4 py-3 rounded-lg border dark:border-gray-700 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm" 
+                     aria-required="true" minlength="11" maxlength="11">
+              <textarea id="contactMessage" placeholder="توضیحات پروژه..." rows="4" required
+                        class="w-full px-4 py-3 rounded-lg border dark:border-gray-700 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm" 
+                        aria-required="true" minlength="10" maxlength="1000"></textarea>
+              <button type="submit" id="sendTelegram" 
+                      class="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-3 rounded-lg font-bold hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2 space-x-reverse text-sm">
+                <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                <span data-i18n="contact.formButton">ارسال پیام</span>
               </button>
-            </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Footer with Cool Design -->
   <footer class="bg-gray-900 text-white py-8 md:py-12">
     <div class="container mx-auto px-4">
-      <div class="text-center space-y-3">
-        <div class="flex justify-center space-x-6 space-x-reverse text-2xl">
-          <a href="https://t.me/BK_1ir" target="_blank" class="hover:text-indigo-400 transition transform hover:scale-110"><i class="fab fa-telegram"></i></a>
-          <a href="https://www.linkedin.com/in/bardia-klidari-64a32a30b" target="_blank" class="hover:text-indigo-400 transition transform hover:scale-110"><i class="fab fa-linkedin"></i></a>
-          <a href="mailto:unity.tim.ir@gmail.com" class="hover:text-indigo-400 transition transform hover:scale-110"><i class="fas fa-envelope"></i></a>
-          <a href="tel:09211243320" class="hover:text-indigo-400 transition transform hover:scale-110"><i class="fas fa-phone"></i></a>
+      <div class="flex flex-col items-center space-y-6">
+        <!-- Social Buttons -->
+        <div class="flex justify-center space-x-4 space-x-reverse">
+          <a href="https://t.me/BK_1ir" target="_blank" rel="noopener noreferrer" 
+             class="footer-btn flex items-center justify-center text-white hover:text-indigo-400" 
+             aria-label="Telegram">
+            <i class="fab fa-telegram text-xl" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/bardia-klidari-64a32a30b" target="_blank" rel="noopener noreferrer" 
+             class="footer-btn flex items-center justify-center text-white hover:text-indigo-400" 
+             aria-label="LinkedIn">
+            <i class="fab fa-linkedin text-xl" aria-hidden="true"></i>
+          </a>
+          <a href="mailto:unity.tim.ir@gmail.com" 
+             class="footer-btn flex items-center justify-center text-white hover:text-indigo-400" 
+             aria-label="Email">
+            <i class="fas fa-envelope text-xl" aria-hidden="true"></i>
+          </a>
+          <a href="tel:09211243320" 
+             class="footer-btn flex items-center justify-center text-white hover:text-indigo-400" 
+             aria-label="Phone">
+            <i class="fas fa-phone text-xl" aria-hidden="true"></i>
+          </a>
         </div>
-        <p class="text-gray-400 text-sm">© 2024 Mahdi Klidari. Built with passion and a lot of coffee ☕</p>
-        <p class="text-gray-500 text-xs">Available 24/7 for awesome projects | ارتباط ۲۴ ساعته</p>
+        
+        <!-- Clickable Phone & Email -->
+        <div class="flex flex-wrap justify-center gap-6 text-sm">
+          <a href="tel:09211243320" class="flex items-center space-x-2 space-x-reverse hover:text-indigo-400 transition">
+            <i class="fas fa-phone" aria-hidden="true"></i>
+            <span>09211243320</span>
+          </a>
+          <a href="mailto:unity.tim.ir@gmail.com" class="flex items-center space-x-2 space-x-reverse hover:text-indigo-400 transition">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <span>unity.tim.ir@gmail.com</span>
+          </a>
+        </div>
+        
+        <!-- Copyright -->
+        <p class="text-gray-400 text-sm" data-i18n="footer.copyright">© 2024 Mahdi Klidari. Built with passion and a lot of coffee ☕</p>
+        <p class="text-gray-500 text-xs" data-i18n="footer.availability">Available 24/7 for awesome projects | ارتباط ۲۴ ساعته</p>
       </div>
     </div>
   </footer>
 
   <script>
-    // Language Switcher
+    // ============================================================================
+    // TRANSLATION SYSTEM (SEO-Optimized Content)
+    // ============================================================================
+    
     const translations = {
       fa: {
-        nav: ['درباره من', 'مهارت‌ها', 'پروژه‌ها', 'تجربیات', 'تماس'],
-        heroRole: 'توسعه‌دهنده فول‌استک | Unity Expert | AI Automation',
-        aboutTitle: 'درباره من',
-        skillsTitle: 'مهارت‌های تخصصی',
-        projectsTitle: 'پروژه‌های برجسته',
-        experienceTitle: 'تجربیات حرفه‌ای',
-        contactTitle: 'بیایید همکاری کنیم',
-        langText: 'EN'
+        brand: { name: 'Mahdi Klidari' },
+        nav: { 
+          about: 'درباره من', 
+          skills: 'مهارت‌ها', 
+          projects: 'پروژه‌ها', 
+          experience: 'تجربیات', 
+          contact: 'تماس' 
+        },
+        hero: { 
+          role: 'توسعه‌دهنده فول‌استک | Unity Expert | متخصص اتوماسیون هوشمند',
+          cta1: 'شروع همکاری',
+          cta2: 'تماس تلگرام'
+        },
+        about: {
+          title: 'درباره من',
+          subtitle: 'چرا باید با من کار کنی؟',
+          points: [
+            'بیش از 6 سال تجربه برنامه‌نویسی حرفه‌ای',
+            'تخصص در Unity, React, Laravel, Python',
+            'تسلط بر هوش مصنوعی و اتوماسیون با n8n',
+            'متخصص امنیت سایبری و تست نفوذ'
+          ],
+          description1: 'من مهدی کلیداری هستم، یک توسعه‌دهنده فول‌استک که عاشق خلق تجربه‌های دیجیتالی بی‌نظیره. از توسعه بازی‌های AAA با Unity تا ساخت وب‌اپلیکیشن‌های مقیاس‌پذیر با React و Laravel، همیشه به دنبال کد تمیز، بهینه و نوآورانه هستم.',
+          description2: 'تسلط من بر هوش مصنوعی و اتوماسیون با n8n بهم این اجازه رو میده که سیستم‌های هوشمند بسازم. همچنین تخصص من در امنیت سایبری باعث میشه محصولاتی تحویل بدم که نه تنها زیبا، بلکه کاملاً امن هستن.'
+        },
+        skills: {
+          title: 'مهارت‌های تخصصی',
+          items: [
+            { 
+              name: 'Unity (C#)', 
+              level: 'سطح: متخصص', 
+              percent: 100, 
+              color: 'indigo',
+              img: 'https://via.placeholder.com/64x64/4A5568/FFFFFF?text=Unity'
+            },
+            { 
+              name: 'React & Next.js', 
+              level: 'سطح: پیشرفته', 
+              percent: 90, 
+              color: 'cyan',
+              img: 'https://via.placeholder.com/64x64/61DAFB/000000?text=React'
+            },
+            { 
+              name: 'Laravel & PHP', 
+              level: 'سطح: پیشرفته', 
+              percent: 85, 
+              color: 'red',
+              img: 'https://via.placeholder.com/64x64/FF2D20/FFFFFF?text=Laravel'
+            },
+            { 
+              name: 'Python & AI', 
+              level: 'سطح: پیشرفته', 
+              percent: 80, 
+              color: 'green',
+              img: 'https://via.placeholder.com/64x64/3776AB/FFFFFF?text=Python'
+            },
+            { 
+              name: 'JavaScript (ES2023)', 
+              level: 'سطح: متخصص', 
+              percent: 95, 
+              color: 'yellow',
+              img: 'https://via.placeholder.com/64x64/F7DF1E/000000?text=JS'
+            },
+            { 
+              name: 'n8n Automation', 
+              level: 'سطح: پیشرفته', 
+              percent: 75, 
+              color: 'purple',
+              img: 'https://via.placeholder.com/64x64/FF6B6B/FFFFFF?text=n8n'
+            },
+            { 
+              name: 'Cyber Security', 
+              level: 'سطح: متوسط', 
+              percent: 70, 
+              color: 'red',
+              img: 'https://via.placeholder.com/64x64/FF0000/FFFFFF?text=Security'
+            },
+            { 
+              name: 'C/C++ Systems', 
+              level: 'سطح: متوسط', 
+              percent: 85, 
+              color: 'blue',
+              img: 'https://via.placeholder.com/64x64/00599C/FFFFFF?text=C%2B%2B'
+            }
+          ]
+        },
+        projects: {
+          title: 'پروژه‌های برجسته',
+          items: [
+            {
+              title: 'بازی اکشن 3D - Unity Engine',
+              description: 'پلتفرمر اکشن با گرافیک AAA، فیزیک پیشرفته Havok، AI دشمنان پیچیده با فرمولاسیون Behavior Trees و سیستم مولتی‌پلیر آنلاین 8 نفره با Photon Fusion. بهینه‌سازی شده برای 60 FPS رو موبایل و 120 FPS رو PC.',
+              tags: ['Unity 2023', 'C#', 'Photon', 'Havok Physics', 'URP'],
+              gradient: 'from-indigo-500 to-purple-600',
+              img: 'https://via.placeholder.com/400x300/667eea/FFFFFF?text=Unity+Game'
+            },
+            {
+              title: 'Security Scanner Suite - ابزار اختصاصی',
+              description: 'ابزار جامع تست نفوذ با اسکن خودکار آسیب‌پذیری‌های OWASP Top 10، گزارش‌گیری حرفه‌ای PDF/CSV و داشبورد مدیریتی ریل‌تایم. دارای ماژول‌های fuzzing، reconnaissance و exploitation برای وب و شبکه.',
+              tags: ['Python', 'React', 'OWASP', 'Metasploit API', 'Docker'],
+              gradient: 'from-red-500 to-orange-600',
+              img: 'https://via.placeholder.com/400x300/FF2D20/FFFFFF?text=Security+Tool'
+            },
+            {
+              title: 'AI Automation System - n8n Enterprise',
+              description: 'سیستم اتوماسیون هوشمند با n8n برای مدیریت 200+ workflow و ادغام AI. اتوماسیون کامل فرآیندهای کسب‌وکار از CRM تا ساپورت با هوش مصنوعی GPT-4 و مدل‌های اختصاصی.',
+              tags: ['n8n', 'Node.js', 'OpenAI API', 'PostgreSQL', 'Redis'],
+              gradient: 'from-green-500 to-emerald-600',
+              img: 'https://via.placeholder.com/400x300/00D084/FFFFFF?text=AI+Automation'
+            },
+            {
+              title: 'E-Commerce Platform - پلتفرم B2B2C',
+              description: 'فروشگاه ساز حرفه‌ای با پنل ادمین پیشرفته، سیستم پرداخت زرین‌پال و IDPay، مدیریت انبار هوشمند و پنل فروشندگان. پشتیبانی از 50K محصول و 10K کاربر همزمان.',
+              tags: ['Laravel 10', 'Vue.js 3', 'MySQL', 'Redis', 'Elasticsearch'],
+              gradient: 'from-blue-500 to-cyan-600',
+              img: 'https://via.placeholder.com/400x300/FF6B6B/FFFFFF?text=E-Commerce'
+            },
+            {
+              title: 'Analytics Dashboard - BI Tool',
+              description: 'داشبورد تحلیل داده‌های تجاری با نمودارهای زنده Chart.js، گزارش‌گیری پیشرفته و پیش‌بینی فروش با ML. اتصال به دیتاسورس‌های متنوع از جمله Google Analytics، MySQL و Excel.',
+              tags: ['React', 'Chart.js', 'Python', 'Pandas', 'FastAPI'],
+              gradient: 'from-purple-500 to-pink-600',
+              img: 'https://via.placeholder.com/400x300/6C5CE7/FFFFFF?text=Analytics'
+            },
+            {
+              title: 'Social Media App - React Native',
+              description: 'اپلیکیشن شبکه اجتماعی کراس‌پلتفرم با React Native، آرچیتکچر MVVM، Firebase Authentication و Realtime Database. شامل پست‌گذاری، استوری و چت ریل‌تایم.',
+              tags: ['React Native', 'Firebase', 'Redux Toolkit', 'WebRTC', 'Expo'],
+              gradient: 'from-yellow-500 to-orange-600',
+              img: 'https://via.placeholder.com/400x300/FDCB6E/000000?text=Mobile+App'
+            }
+          ]
+        },
+        experience: {
+          title: 'تجربیات حرفه‌ای',
+          items: [
+            {
+              icon: 'fa-gamepad',
+              title: 'توسعه‌دهنده ارشد بازی (Unity)',
+              date: '2022 - حال',
+              company: 'استودیو مستقل بازی‌سازی',
+              description: 'توسعه بازی‌های AAA با Unity، بهینه‌سازی Performance و گرافیک، پیاده‌سازی سیستم‌های چندنفره آنلاین با Photon و Shader Graph برای جلوه‌های بصری next-gen.'
+            },
+            {
+              icon: 'fa-code',
+              title: 'توسعه‌دهنده فول‌استک (Lead)',
+              date: '2020 - 2022',
+              company: 'شرکت فناوری اطلاعات برتر',
+              description: 'طراحی معماری سیستم‌های تحت وب، توسعه API‌های RESTful با Laravel، پیاده‌سازی CI/CD با GitLab و اتوماسیون 30+ فرآیند با n8n.'
+            },
+            {
+              icon: 'fa-shield-alt',
+              title: 'کارشناس امنیت سایبری',
+              date: '2019 - 2020',
+              company: 'شرکت امنیت سایبری',
+              description: 'ارزیابی امنیت برنامه‌ها با OWASP ASVS، تست نفوذ پیشرفته برای 50+ سازمان، پیاده‌سازی راهکارهای امنیتی و آموزش تیم DevSecOps.'
+            }
+          ]
+        },
+        contact: {
+          title: 'بیایید همکاری کنیم',
+          subtitle: 'پروژه بعدی رو باهم بسازیم',
+          description: 'اگه دنبال توسعه‌دهنده‌ای حرفه‌ای می‌گردید که کد تمیز، راهکارهای خلاقانه و تحویل سریع داشته باشه، من اینجام تا پروژه‌تون رو به واقعیت تبدیل کنم. از ایده‌هاتون بگید تا یه چیز خفن بسازیم!',
+          formTitle: 'فرم تماس سریع',
+          formButton: 'ارسال پیام',
+          phone: '09211243320', // EXACT phone number for both languages
+          email: 'unity.tim.ir@gmail.com',
+          telegram: '@BK_1ir',
+          info: [
+            { 
+              icon: 'fa-envelope', 
+              label: 'ایمیل', 
+              value: 'unity.tim.ir@gmail.com',
+              link: 'mailto:unity.tim.ir@gmail.com'
+            },
+            { 
+              icon: 'fa-phone', 
+              label: 'تماس مستقیم', 
+              value: '09211243320', // EXACT same for both langs
+              link: 'tel:09211243320'
+            },
+            { 
+              icon: 'fa-telegram', 
+              label: 'تلگرام', 
+              value: '@BK_1ir',
+              link: 'https://t.me/BK_1ir'
+            }
+          ]
+        },
+        footer: {
+          copyright: '© 2024 Mahdi Klidari. Built with passion and a lot of coffee ☕',
+          availability: 'Available 24/7 for awesome projects | ارتباط ۲۴ ساعته'
+        }
       },
       en: {
-        nav: ['About', 'Skills', 'Projects', 'Experience', 'Contact'],
-        heroRole: 'Full Stack Developer | Unity Expert | AI Automation',
-        aboutTitle: 'About Me',
-        skillsTitle: 'My Skills',
-        projectsTitle: 'Featured Projects',
-        experienceTitle: 'Professional Experience',
-        contactTitle: "Let's Work Together",
-        langText: 'FA'
+        brand: { name: 'Mahdi Klidari' },
+        nav: { 
+          about: 'About', 
+          skills: 'Skills', 
+          projects: 'Projects', 
+          experience: 'Experience', 
+          contact: 'Contact' 
+        },
+        hero: { 
+          role: 'Full Stack Developer | Unity Expert | AI Automation Specialist',
+          cta1: 'Start Collaboration',
+          cta2: 'Telegram Contact'
+        },
+        about: {
+          title: 'About Me',
+          subtitle: 'Why Work With Me?',
+          points: [
+            '6+ Years Professional Development Experience',
+            'Expert in Unity, React, Laravel, Python',
+            'AI & n8n Automation Mastery',
+            'Cyber Security & Penetration Testing Specialist'
+          ],
+          description1: 'I\'m Mahdi Klidari, a full-stack developer passionate about creating exceptional digital experiences. From developing AAA games with Unity to building scalable web apps with React and Laravel, I always strive for clean, optimized, and innovative code.',
+          description2: 'My expertise in AI and n8n automation allows me to build intelligent systems. Additionally, my specialization in cyber security ensures I deliver products that are not only beautiful but completely secure.'
+        },
+        skills: {
+          title: 'My Skills',
+          items: [
+            { 
+              name: 'Unity (C#)', 
+              level: 'Level: Expert', 
+              percent: 100, 
+              color: 'indigo',
+              img: 'https://via.placeholder.com/64x64/4A5568/FFFFFF?text=Unity'
+            },
+            { 
+              name: 'React & Next.js', 
+              level: 'Level: Advanced', 
+              percent: 90, 
+              color: 'cyan',
+              img: 'https://via.placeholder.com/64x64/61DAFB/000000?text=React'
+            },
+            { 
+              name: 'Laravel & PHP', 
+              level: 'Level: Advanced', 
+              percent: 85, 
+              color: 'red',
+              img: 'https://via.placeholder.com/64x64/FF2D20/FFFFFF?text=Laravel'
+            },
+            { 
+              name: 'Python & AI', 
+              level: 'Level: Advanced', 
+              percent: 80, 
+              color: 'green',
+              img: 'https://via.placeholder.com/64x64/3776AB/FFFFFF?text=Python'
+            },
+            { 
+              name: 'JavaScript (ES2023)', 
+              level: 'Level: Expert', 
+              percent: 95, 
+              color: 'yellow',
+              img: 'https://via.placeholder.com/64x64/F7DF1E/000000?text=JS'
+            },
+            { 
+              name: 'n8n Automation', 
+              level: 'Level: Advanced', 
+              percent: 75, 
+              color: 'purple',
+              img: 'https://via.placeholder.com/64x64/FF6B6B/FFFFFF?text=n8n'
+            },
+            { 
+              name: 'Cyber Security', 
+              level: 'Level: Intermediate', 
+              percent: 70, 
+              color: 'red',
+              img: 'https://via.placeholder.com/64x64/FF0000/FFFFFF?text=Security'
+            },
+            { 
+              name: 'C/C++ Systems', 
+              level: 'Level: Intermediate', 
+              percent: 85, 
+              color: 'blue',
+              img: 'https://via.placeholder.com/64x64/00599C/FFFFFF?text=C%2B%2B'
+            }
+          ]
+        },
+        projects: {
+          title: 'Featured Projects',
+          items: [
+            {
+              title: '3D Action Game - Unity Engine',
+              description: 'Action platformer with AAA graphics, advanced Havok physics, complex enemy AI with Behavior Trees, and 8-player online multiplayer via Photon Fusion. Optimized for 60 FPS on mobile and 120 FPS on PC.',
+              tags: ['Unity 2023', 'C#', 'Photon', 'Havok Physics', 'URP'],
+              gradient: 'from-indigo-500 to-purple-600',
+              img: 'https://via.placeholder.com/400x300/667eea/FFFFFF?text=Unity+Game'
+            },
+            {
+              title: 'Security Scanner Suite - Custom Tool',
+              description: 'Comprehensive penetration testing tool with automated OWASP Top 10 vulnerability scanning, professional PDF/CSV reporting, and real-time management dashboard. Includes fuzzing, reconnaissance, and exploitation modules for web and network.',
+              tags: ['Python', 'React', 'OWASP', 'Metasploit API', 'Docker'],
+              gradient: 'from-red-500 to-orange-600',
+              img: 'https://via.placeholder.com/400x300/FF2D20/FFFFFF?text=Security+Tool'
+            },
+            {
+              title: 'AI Automation System - n8n Enterprise',
+              description: 'Intelligent automation system with n8n for managing 200+ workflows and AI integration. Complete business process automation from CRM to support with GPT-4 and custom ML models.',
+              tags: ['n8n', 'Node.js', 'OpenAI API', 'PostgreSQL', 'Redis'],
+              gradient: 'from-green-500 to-emerald-600',
+              img: 'https://via.placeholder.com/400x300/00D084/FFFFFF?text=AI+Automation'
+            },
+            {
+              title: 'E-Commerce Platform - B2B2C Marketplace',
+              description: 'Professional e-commerce platform with advanced admin panel, ZarinPal & IDPay payment integration, smart inventory management, and vendor panel. Supports 50K products and 10K concurrent users.',
+              tags: ['Laravel 10', 'Vue.js 3', 'MySQL', 'Redis', 'Elasticsearch'],
+              gradient: 'from-blue-500 to-cyan-600',
+              img: 'https://via.placeholder.com/400x300/FF6B6B/FFFFFF?text=E-Commerce'
+            },
+            {
+              title: 'Analytics Dashboard - BI Tool',
+              description: 'Business intelligence dashboard with real-time Chart.js visualizations, advanced reporting, and ML-based sales forecasting. Connects to various data sources including Google Analytics, MySQL, and Excel.',
+              tags: ['React', 'Chart.js', 'Python', 'Pandas', 'FastAPI'],
+              gradient: 'from-purple-500 to-pink-600',
+              img: 'https://via.placeholder.com/400x300/6C5CE7/FFFFFF?text=Analytics'
+            },
+            {
+              title: 'Social Media App - React Native',
+              description: 'Cross-platform social media app with React Native, MVVM architecture, Firebase Authentication and Real-time Database. Features posting, stories, and real-time chat.',
+              tags: ['React Native', 'Firebase', 'Redux Toolkit', 'WebRTC', 'Expo'],
+              gradient: 'from-yellow-500 to-orange-600',
+              img: 'https://via.placeholder.com/400x300/FDCB6E/000000?text=Mobile+App'
+            }
+          ]
+        },
+        experience: {
+          title: 'Professional Experience',
+          items: [
+            {
+              icon: 'fa-gamepad',
+              title: 'Senior Unity Game Developer (Lead)',
+              date: '2022 - Present',
+              company: 'Independent Game Studio',
+              description: 'Developing AAA games with Unity, performance and graphics optimization, implementing online multiplayer systems with Photon, and creating visual effects with Shader Graph for next-gen graphics.'
+            },
+            {
+              icon: 'fa-code',
+              title: 'Full Stack Developer (Lead)',
+              date: '2020 - 2022',
+              company: 'Top IT Solutions Company',
+              description: 'Designing web system architecture, developing RESTful APIs with Laravel, implementing CI/CD with GitLab, and automating 30+ business processes with n8n.'
+            },
+            {
+              icon: 'fa-shield-alt',
+              title: 'Cyber Security Specialist',
+              date: '2019 - 2020',
+              company: 'Cyber Security Firm',
+              description: 'Security assessment of applications using OWASP ASVS, advanced penetration testing for 50+ organizations, implementing security solutions, and training DevSecOps teams.'
+            }
+          ]
+        },
+        contact: {
+          title: 'Let\\\'s Work Together',
+          subtitle: 'Build Your Next Project With Me',
+          description: 'Looking for a professional developer who delivers clean code, creative solutions, and fast turnaround? I\\\'m here to turn your ideas into reality. Share your vision and let\\\'s create something amazing!',
+          formTitle: 'Quick Contact Form',
+          formButton: 'Send Message',
+          phone: '09211243320', // EXACT same for both languages
+          email: 'unity.tim.ir@gmail.com',
+          telegram: '@BK_1ir',
+          info: [
+            { 
+              icon: 'fa-envelope', 
+              label: 'Email', 
+              value: 'unity.tim.ir@gmail.com',
+              link: 'mailto:unity.tim.ir@gmail.com'
+            },
+            { 
+              icon: 'fa-phone', 
+              label: 'Direct Call', 
+              value: '09211243320', // EXACT same for both langs
+              link: 'tel:09211243320'
+            },
+            { 
+              icon: 'fa-telegram', 
+              label: 'Telegram', 
+              value: '@BK_1ir',
+              link: 'https://t.me/BK_1ir'
+            }
+          ]
+        },
+        footer: {
+          copyright: '© 2024 Mahdi Klidari. Built with passion and a lot of coffee ☕',
+          availability: 'Available 24/7 for awesome projects | ارتباط ۲۴ ساعته'
+        }
       }
     };
 
     let currentLang = localStorage.getItem('lang') || 'fa';
+    let observer;
+    
+    // ============================================================================
+    // CONTENT RENDERING FUNCTIONS
+    // ============================================================================
+    
+    function renderAbout(lang) {
+      const t = translations[lang].about;
+      const pointsContainer = document.getElementById('aboutPoints');
+      pointsContainer.innerHTML = '';
+      t.points.forEach(point => {
+        const li = document.createElement('li');
+        li.className = 'flex items-start';
+        li.innerHTML = `<i class="fas fa-check-circle text-indigo-500 ml-3 mt-1 flex-shrink-0" aria-hidden="true"></i> <span>${point}</span>`;
+        pointsContainer.appendChild(li);
+      });
+    }
+
+    function renderSkills(lang) {
+      const t = translations[lang].skills;
+      const container = document.getElementById('skillsContainer');
+      container.innerHTML = '';
+      
+      const colorMap = {
+        indigo: { bg: 'indigo-600', text: 'indigo-600', gradient: 'from-indigo-500 to-purple-600' },
+        cyan: { bg: 'cyan-600', text: 'cyan-600', gradient: 'from-cyan-500 to-blue-600' },
+        red: { bg: 'red-600', text: 'red-600', gradient: 'from-red-500 to-pink-600' },
+        green: { bg: 'green-600', text: 'green-600', gradient: 'from-green-500 to-emerald-600' },
+        yellow: { bg: 'yellow-500', text: 'yellow-600', gradient: 'from-yellow-500 to-orange-600' },
+        purple: { bg: 'purple-600', text: 'purple-600', gradient: 'from-purple-500 to-pink-600' },
+        blue: { bg: 'blue-600', text: 'blue-600', gradient: 'from-blue-500 to-cyan-600' }
+      };
+
+      t.items.forEach(skill => {
+        const colors = colorMap[skill.color];
+        const card = document.createElement('div');
+        card.className = 'skill-card card-hover bg-white dark:bg-gray-800 rounded-2xl p-4 md:p-6 shadow-xl scroll-reveal';
+        card.innerHTML = `
+          <div class="flex justify-between items-center mb-3">
+            <div class="flex items-center space-x-3 space-x-reverse">
+              <img src="${skill.img}" alt="${skill.name}" class="skill-img" />
+              <div>
+                <div class="font-bold text-lg text-gray-800 dark:text-white">${skill.name}</div>
+                <div class="text-xs text-gray-500">${skill.level}</div>
+              </div>
+            </div>
+            <span class="text-xl md:text-2xl font-bold text-${colors.text}">${skill.percent}%</span>
+          </div>
+          <div class="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+            <div class="skill-progress h-full bg-gradient-to-r ${colors.gradient}" style="width: ${skill.percent}%"></div>
+          </div>
+        `;
+        container.appendChild(card);
+        if (observer) observer.observe(card);
+      });
+    }
+
+    function renderProjects(lang) {
+      const t = translations[lang].projects;
+      const container = document.getElementById('projectsContainer');
+      container.innerHTML = '';
+      
+      t.items.forEach(project => {
+        const card = document.createElement('article');
+        card.className = 'project-card card-hover bg-gray-50 dark:bg-gray-900 rounded-2xl overflow-hidden shadow-xl scroll-reveal';
+        card.innerHTML = `
+          <div class="h-48 bg-gradient-to-br ${project.gradient} flex items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-black/20" aria-hidden="true"></div>
+            <img src="${project.img}" alt="${project.title}" class="project-img" />
+          </div>
+          <div class="p-5 md:p-6">
+            <h3 class="text-lg md:text-xl font-bold mb-2 text-gray-800 dark:text-white">${project.title}</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">${project.description}</p>
+            <div class="flex flex-wrap gap-1 mb-3">
+              ${project.tags.map(tag => `<span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-300 rounded text-xs">${tag}</span>`).join('')}
+            </div>
+          </div>
+        `;
+        container.appendChild(card);
+        if (observer) observer.observe(card);
+      });
+    }
+
+    function renderExperience(lang) {
+      const t = translations[lang].experience;
+      const container = document.getElementById('experienceContainer');
+      container.innerHTML = '';
+      
+      t.items.forEach(exp => {
+        const item = document.createElement('div');
+        item.className = 'timeline-item scroll-reveal mb-8 md:mb-12 relative';
+        item.innerHTML = `
+          <div class="flex items-start space-x-4 space-x-reverse">
+            <div class="flex-shrink-0 w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center text-white shadow-lg">
+              <i class="${exp.icon}" aria-hidden="true"></i>
+            </div>
+            <div class="bg-white dark:bg-gray-800 p-5 md:p-6 rounded-2xl shadow-xl flex-1 card-hover">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-lg md:text-xl font-bold text-gray-800 dark:text-white">${exp.title}</h3>
+                <span class="text-xs md:text-sm text-gray-500 dark:text-gray-400">${exp.date}</span>
+              </div>
+              <p class="text-indigo-600 dark:text-indigo-400 text-sm mb-2">${exp.company}</p>
+              <p class="text-gray-600 dark:text-gray-300 text-sm">${exp.description}</p>
+            </div>
+          </div>
+        `;
+        const hoverElement = item.querySelector('.card-hover');
+        hoverElement.addEventListener('mouseenter', () => {
+          hoverElement.style.transform = 'translateY(-10px) scale(1.02)';
+        });
+        hoverElement.addEventListener('mouseleave', () => {
+          hoverElement.style.transform = '';
+        });
+        container.appendChild(item);
+        if (observer) observer.observe(item);
+      });
+    }
+
+    function renderContact(lang) {
+      const t = translations[lang].contact;
+      const infoContainer = document.getElementById('contactInfo');
+      infoContainer.innerHTML = '';
+      
+      t.info.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'flex items-center space-x-3 space-x-reverse';
+        div.innerHTML = `
+          <div class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900 rounded-full flex items-center justify-center flex-shrink-0">
+            <i class="fas ${item.icon} text-indigo-600 dark:text-indigo-300" aria-hidden="true"></i>
+          </div>
+          <div>
+            <p class="text-xs text-gray-500 dark:text-gray-400">${item.label}</p>
+            ${item.link ? 
+              `<a href="${item.link}" class="font-medium text-gray-800 dark:text-white hover:text-indigo-600">${item.value}</a>` :
+              `<p class="font-medium text-gray-800 dark:text-white">${item.value}</p>`
+            }
+          </div>
+        `;
+        infoContainer.appendChild(div);
+      });
+    }
+
+    // ============================================================================
+    // LANGUAGE MANAGEMENT
+    // ============================================================================
     
     const langSwitch = document.getElementById('langSwitch');
     const langSwitchMobile = document.getElementById('langSwitchMobile');
@@ -892,18 +1134,24 @@
       html.lang = lang;
       html.dir = lang === 'fa' ? 'rtl' : 'ltr';
       
-      const t = translations[lang];
-      langText.textContent = t.langText;
-      langTextMobile.textContent = t.langText;
+      // Update language button text
+      langText.textContent = lang === 'fa' ? 'EN' : 'FA';
+      langTextMobile.textContent = lang === 'fa' ? 'EN' : 'FA';
       
-      // Update nav links
-      document.querySelectorAll('.nav-link').forEach((link, index) => {
-        if (t.nav[index]) {
-          link.textContent = t.nav[index];
+      // Update all elements with data-i18n attribute
+      document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        const keys = key.split('.');
+        let value = translations[lang];
+        for (let k of keys) {
+          value = value[k];
+        }
+        if (value) {
+          element.textContent = value;
         }
       });
       
-      // Update hero role
+      // Update typed.js role
       if (typedRole) {
         typedRole.destroy();
       }
@@ -919,27 +1167,37 @@
         cursorChar: '|'
       });
       
-      // Update section titles
-      const sections = ['about', 'skills', 'projects', 'experience', 'contact'];
-      sections.forEach(section => {
-        const element = document.querySelector(`#${section} h2`);
-        if (element) {
-          const titleKey = `${section}Title`;
-          const newTitle = t[titleKey];
-          if (newTitle) {
-            element.innerHTML = `<span class="gradient-text">${newTitle}</span>`;
-          }
-        }
-      });
+      // Re-render all dynamic content
+      renderAllContent(lang);
     }
 
-    // Initialize typed.js
+    function renderAllContent(lang) {
+      renderAbout(lang);
+      renderSkills(lang);
+      renderProjects(lang);
+      renderExperience(lang);
+      renderContact(lang);
+      
+      // Re-initialize scroll observers for new elements
+      setTimeout(() => {
+        document.querySelectorAll('.scroll-reveal:not(.revealed)').forEach(el => {
+          observer.observe(el);
+        });
+      }, 100);
+    }
+
+    // ============================================================================
+    // INITIALIZATION
+    // ============================================================================
+    
+    // Initialize typed.js for name
     new Typed('#typed-name', {
       strings: ['Mahdi Klidari'],
       typeSpeed: 100,
       showCursor: false
     });
 
+    // Initialize typed.js for role
     let typedRole = new Typed('#typed-role', {
       strings: currentLang === 'fa' ? 
         ['توسعه‌دهنده فول‌استک | Unity Expert', 'متخصص هوش مصنوعی', 'کارشناس امنیت سایبری'] :
@@ -956,16 +1214,17 @@
     langSwitch.addEventListener('click', () => {
       const newLang = currentLang === 'fa' ? 'en' : 'fa';
       updateLanguage(newLang);
-      createParticles(langSwitch);
     });
 
     langSwitchMobile.addEventListener('click', () => {
       const newLang = currentLang === 'fa' ? 'en' : 'fa';
       updateLanguage(newLang);
-      createParticles(langSwitchMobile);
     });
 
-    // Theme Toggle
+    // ============================================================================
+    // THEME TOGGLE
+    // ============================================================================
+    
     const themeToggle = document.getElementById('themeToggle');
     const themeToggleMobile = document.getElementById('themeToggleMobile');
     const isDarkMode = localStorage.getItem('darkMode') === 'true';
@@ -982,201 +1241,48 @@
       themeToggle.classList.toggle('dark');
       themeToggleMobile.classList.toggle('dark');
       localStorage.setItem('darkMode', !isDark);
-      createParticles(themeToggle);
     }
 
     themeToggle.addEventListener('click', toggleTheme);
     themeToggleMobile.addEventListener('click', toggleTheme);
 
-    // Mobile Menu
+    // ============================================================================
+    // MOBILE MENU
+    // ============================================================================
+    
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     
     mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('active');
+      const isActive = mobileMenu.classList.toggle('active');
+      mobileMenuBtn.setAttribute('aria-expanded', isActive);
       const icon = mobileMenuBtn.querySelector('i');
       icon.classList.toggle('fa-bars');
       icon.classList.toggle('fa-times');
     });
 
-    // Chat Bot
-    const chatButton = document.getElementById('chatButton');
-    const chatModal = document.getElementById('chatModal');
-    const closeChat = document.getElementById('closeChat');
-    const chatInput = document.getElementById('chatInput');
-    const sendMessage = document.getElementById('sendMessage');
-    const chatMessages = document.getElementById('chatMessages');
-
-    chatButton.addEventListener('click', () => {
-      chatModal.classList.toggle('hidden');
-      chatModal.classList.add('flex');
-    });
-
-    closeChat.addEventListener('click', () => {
-      chatModal.classList.add('hidden');
-    });
-
-    // Cerebras AI Integration
-    const API_KEY = 'csk-6e38xjy9xw69v48ekjcx26pep4dy4pkyv66c8d5w3f36pjvf';
-    const API_URL = 'https://api.cerebras.ai/v1/chat/completions';
-
-    async function sendToAI(message) {
-      try {
-        const response = await fetch(API_URL, {
-          method: 'POST',
-          headers: {
-            'Authorization': `Bearer ${API_KEY}`,
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            messages: [
-              {
-                role: 'system',
-                content: `شما دستیار هوش مصنوعی مهدی کلیداری هستید. فقط به سوالات مرتبط با مهارت‌ها، تجربیات، پروژه‌ها و نحوه همکاری مهدی پاسخ دهید. اگر سوال غیرمرتبط پرسیدند، مؤدبانه بگویید که فقط در این زمینه‌ها می‌توانید کمک کنید. اطلاعات مهدی: توسعه‌دهنده فول‌استک، متخصص Unity (100%)، JavaScript/React/Laravel/Python، متخصص امنیت و تست نفوذ، متخصص n8n و اتوماسیون، ایمیل: unity.tim.ir@gmail.com، تلگرام: @BK_1ir، تلفن: 09211243320.`
-              },
-              {
-                role: 'user',
-                content: message
-              }
-            ],
-            model: 'llama3.1-70b'
-          })
+    // ============================================================================
+    // SCROLL REVEAL & INTERACTIONS
+    // ============================================================================
+    
+    function initObserver() {
+      observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+          }
         });
-        
-        const data = await response.json();
-        return data.choices[0].message.content;
-      } catch (error) {
-        console.error('AI Error:', error);
-        return currentLang === 'fa' ? 
-          'متأسفانه در حال حاضر دسترسی به AI امکان‌پذیر نیست. لطفاً از طریق تلگرام یا ایمیل با من در ارتباط باشید.' :
-          'AI is currently unavailable. Please contact me via Telegram or email.';
-      }
-    }
-
-    async function addMessage(content, isUser = false) {
-      const messageDiv = document.createElement('div');
-      messageDiv.className = `chat-bubble ${isUser ? 'bg-blue-100 dark:bg-blue-900 ml-auto' : 'bg-gray-100 dark:bg-gray-700'} p-3 rounded-lg max-w-xs text-sm ${isUser ? 'rounded-br-none' : 'rounded-bl-none'}`;
-      messageDiv.innerHTML = content;
-      chatMessages.appendChild(messageDiv);
-      chatMessages.scrollTop = chatMessages.scrollHeight;
-
-      if (isUser) {
-        // Typing indicator
-        const typingDiv = document.createElement('div');
-        typingDiv.className = 'chat-bubble bg-gray-100 dark:bg-gray-700 p-3 rounded-lg rounded-bl-none max-w-xs';
-        typingDiv.innerHTML = '<div class="typing-indicator"><span></span><span></span><span></span></div>';
-        chatMessages.appendChild(typingDiv);
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-
-        const aiResponse = await sendToAI(content);
-        
-        // Remove typing indicator
-        chatMessages.removeChild(typingDiv);
-        
-        // Add AI response
-        const aiDiv = document.createElement('div');
-        aiDiv.className = 'chat-bubble bg-gray-100 dark:bg-gray-700 p-3 rounded-lg rounded-bl-none max-w-xs text-sm';
-        aiDiv.innerHTML = aiResponse;
-        chatMessages.appendChild(aiDiv);
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-      }
-    }
-
-    sendMessage.addEventListener('click', async () => {
-      const message = chatInput.value.trim();
-      if (!message) return;
-      
-      await addMessage(message, true);
-      chatInput.value = '';
-    });
-
-    chatInput.addEventListener('keypress', (e) => {
-      if (e.key === 'Enter') {
-        sendMessage.click();
-      }
-    });
-
-    // Telegram Contact Form
-    const sendTelegram = document.getElementById('sendTelegram');
-    const contactName = document.getElementById('contactName');
-    const contactPhone = document.getElementById('contactPhone');
-    const contactMessage = document.getElementById('contactMessage');
-
-    sendTelegram.addEventListener('click', () => {
-      const name = contactName.value.trim();
-      const phone = contactPhone.value.trim();
-      const message = contactMessage.value.trim();
-      
-      if (!name || !phone || !message) {
-        alert(currentLang === 'fa' ? 'لطفاً تمام فیلدها را پر کنید' : 'Please fill all fields');
-        return;
-      }
-
-      const telegramMessage = `📩 تماس جدید از پورتفولیو:\n\n👤 نام: ${name}\n📞 تلفن: ${phone}\n\n💬 پیام:\n${message}`;
-      const encodedMessage = encodeURIComponent(telegramMessage);
-      const telegramUrl = `https://t.me/BK_1ir?text=${encodedMessage}`;
-      
-      window.open(telegramUrl, '_blank');
-      
-      // Clear form
-      contactName.value = '';
-      contactPhone.value = '';
-      contactMessage.value = '';
-      
-      // Show success message
-      const successMsg = currentLang === 'fa' ? 
-        '✅ پیام شما آماده ارسال است. تلگرام باز خواهد شد.' : 
-        '✅ Your message is ready. Telegram will open.';
-      alert(successMsg);
-    });
-
-    // Scroll Reveal
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('revealed');
-        }
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
       });
-    }, observerOptions);
 
-    document.querySelectorAll('.scroll-reveal').forEach(el => {
-      observer.observe(el);
-    });
-
-    // Particle effect
-    function createParticles(button) {
-      const rect = button.getBoundingClientRect();
-      const particles = 15;
-      
-      for (let i = 0; i < particles; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-        particle.style.left = rect.left + rect.width / 2 + 'px';
-        particle.style.top = rect.top + rect.height / 2 + 'px';
-        particle.style.width = '4px';
-        particle.style.height = '4px';
-        particle.style.background = '#667eea';
-        particle.style.borderRadius = '50%';
-        particle.style.setProperty('--x', (Math.random() - 0.5) * 150 + 'px');
-        particle.style.setProperty('--y', (Math.random() - 0.5) * 150 + 'px');
-        
-        document.body.appendChild(particle);
-        
-        setTimeout(() => particle.remove(), 2000);
-      }
+      document.querySelectorAll('.scroll-reveal').forEach(el => {
+        observer.observe(el);
+      });
     }
 
-    // Add particle effect to buttons
-    document.querySelectorAll('button, a').forEach(btn => {
-      btn.addEventListener('click', () => createParticles(btn));
-    });
-
-    // Smooth scroll
+    // Smooth scroll for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -1188,18 +1294,86 @@
           });
           // Close mobile menu if open
           mobileMenu.classList.remove('active');
-          mobileMenuBtn.querySelector('i').classList.remove('fa-times');
-          mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+          mobileMenuBtn.setAttribute('aria-expanded', 'false');
+          const icon = mobileMenuBtn.querySelector('i');
+          icon.classList.remove('fa-times');
+          icon.classList.add('fa-bars');
         }
       });
     });
 
-    // Initialize language
-    updateLanguage(currentLang);
+    // ============================================================================
+    // CONTACT FORM
+    // ============================================================================
     
-    // Add loading animation
+    const contactForm = document.getElementById('contactForm');
+    const contactName = document.getElementById('contactName');
+    const contactPhone = document.getElementById('contactPhone');
+    const contactMessage = document.getElementById('contactMessage');
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      // Validation
+      if (contactName.value.trim().length < 2) {
+        alert(currentLang === 'fa' ? 'نام باید حداقل ۲ حرف باشد' : 'Name must be at least 2 characters');
+        return;
+      }
+      if (!/^[0-9]{11}$/.test(contactPhone.value.trim())) {
+        alert(currentLang === 'fa' ? 'شماره تلفن باید ۱۱ رقم باشد' : 'Phone must be 11 digits');
+        return;
+      }
+      if (contactMessage.value.trim().length < 10) {
+        alert(currentLang === 'fa' ? 'پیام باید حداقل ۱۰ حرف باشد' : 'Message must be at least 10 characters');
+        return;
+      }
+
+      // Build Telegram message
+      const message = `📩 New Contact Form Submission:\n\n👤 Name: ${contactName.value.trim()}\n📞 Phone: ${contactPhone.value.trim()}\n\n💬 Message:\n${contactMessage.value.trim()}`;
+      const encodedMessage = encodeURIComponent(message);
+      const telegramUrl = `https://t.me/BK_1ir?text=${encodedMessage}`;
+      
+      // Open Telegram
+      window.open(telegramUrl, '_blank', 'noopener,noreferrer');
+      
+      // Reset form
+      contactForm.reset();
+      
+      // Success message
+      alert(currentLang === 'fa' ? '✅ پیام شما آماده ارسال است. تلگرام باز خواهد شد.' : '✅ Your message is ready. Telegram will open.');
+    });
+
+    // Phone input: only digits
+    contactPhone.addEventListener('input', () => {
+      contactPhone.value = contactPhone.value.replace(/[^0-9]/g, '');
+    });
+
+    // ============================================================================
+    // PAGE LOAD
+    // ============================================================================
+    
+    // Initialize everything on load
     window.addEventListener('load', () => {
-      document.body.style.opacity = '1';
+      // Set initial language
+      updateLanguage(currentLang);
+      
+      // Initialize scroll observer
+      initObserver();
+      
+      // Fade in effect
+      document.body.style.opacity = '0';
+      document.body.style.transition = 'opacity 0.5s';
+      setTimeout(() => {
+        document.body.style.opacity = '1';
+      }, 100);
+    });
+
+    // Prevent page shaking on resize
+    window.addEventListener('resize', () => {
+      document.body.style.overflowX = 'hidden';
+      setTimeout(() => {
+        document.body.style.overflowX = '';
+      }, 300);
     });
   </script>
 </body>
